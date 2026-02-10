@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>测试框架Web控制台</title>
+    <!-- 引入Bootstrap和jQuery（CDN，无需本地下载） -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .container { margin-top: 20px; }
+        .result-box { margin-top: 20px; height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; }
+        .tab-content { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">测试框架Web控制台</h2>
+
+        <!-- 选项卡：SSH/SQL切换 -->
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#ssh" data-toggle="tab">SSH测试</a></li>
+            <li><a href="#sql" data-toggle="tab">SQL测试</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <!-- SSH测试面板 -->
+            <div class="tab-pane active" id="ssh">
+                <div class="form-group">
+                    <label>选择环境：</label>
+                    <select id="ssh-env" class="form-control" style="width: 200px;">
+                        <option value="test">测试环境</option>
+                        <option value="pre">预发环境</option>
+                        <option value="prod">生产环境</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>SSH命令：</label>
+                    <textarea id="ssh-command" class="form-control" placeholder="输入SSH命令，如：tail -n 100 /data/logs/test.log"></textarea>
+                </div>
+                <button id="ssh-exec" class="btn btn-primary">执行命令</button>
+                <div class="result-box" id="ssh-result">等待执行...</div>
+            </div>
+
+            <!-- SQL测试面板 -->
+            <div class="tab-pane" id="sql">
+                <div class="form-group">
+                    <label>选择环境：</label>
+                    <select id="sql-env" class="form-control" style="width: 200px;">
+                        <option value="test">测试环境</option>
+                        <option value="pre">预发环境</option>
+                        <option value="prod">生产环境</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>SQL语句：</label>
+                    <textarea id="sql-command" class="form-control" placeholder="输入SQL语句，如：SELECT * FROM test_user LIMIT 10"></textarea>
+                </div>
+                <button id="sql-exec" class="btn btn-primary">执行SQL</button>
+                <div class="result-box" id="sql-result">等待执行...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 前端交互逻辑 -->
+    <script>
+        // SSH执行按钮点击事件
+        $("#ssh-exec").click(function() {
+            var env = $("#ssh-env").val();
+            var command = $("#ssh-command").val();
+            $("#ssh-result").text("执行中...");
+
+            // 调用后端SSH接口
+            $.ajax({
+                url: "/api/ssh/exec",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({env: env, command: command}),
+                success: function(res) {
+                    if (res.code === 200) {
+                        $("#ssh-result").text("执行结果：\n" + JSON.stringify(res.data, null, 2));
+                    } else {
+                        $("#ssh-result").text("执行失败：\n" + res.msg);
+                    }
+                },
+                error: function() {
+                    $("#ssh-result").text("接口调用失败，请检查后端服务");
+                }
+            });
+        });
+
+        // SQL执行按钮点击事件
+        $("#sql-exec").click(function() {
+            var env = $("#sql-env").val();
+            var sql = $("#sql-command").val();
+            $("#sql-result").text("执行中...");
+
+            // 调用后端SQL接口
+            $.ajax({
+                url: "/api/sql/exec",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({env: env, sql: sql}),
+                success: function(res) {
+                    if (res.code === 200) {
+                        $("#sql-result").text("执行结果：\n" + JSON.stringify(res.data, null, 2));
+                    } else {
+                        $("#sql-result").text("执行失败：\n" + res.msg);
+                    }
+                },
+                error: function() {
+                    $("#sql-result").text("接口调用失败，请检查后端服务");
+                }
+            });
+        });
+    </script>
+
+    <!-- 引入Bootstrap JS -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
