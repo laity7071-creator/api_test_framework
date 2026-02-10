@@ -16,3 +16,5 @@ pycryptodome>=3.19.0
 pytest-xdist>=3.5.0
 # 环境变量解析
 python-dotenv>=1.0.0
+#安装 Allure 环境
+allure-pytest

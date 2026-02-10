@@ -7,13 +7,12 @@
 3. conftest.db_connect：数据库连接夹具（可选，若无需数据库可删除）
 """
 import pytest
-
 from utils.log_util import logger
 # 关键修改：导入全局实例request_util，而非BaseRequest类
 from core.base_request import request_util
 from core.db_operation import db_util  # 导入数据库操作实例
-from data.login_data import success_case
-
+from data.SkyHash_suanli.login_data import success_case
+from core.token_manager import token_manager  # 导入token管理器
 
 def test_login_success(db_connect):
     """
@@ -36,14 +35,16 @@ def test_login_success(db_connect):
     try:
         # 2. 调用登录接口（关键修改：用request_util实例调用post方法，而非BaseRequest类）
         resp = request_util.post(
-            path="/cdpapi/v1/cdp/admin/user/login",  # 接口路径（base_url已在request_util中初始化）
+            path=success_case["request_path_SkyHash_suanli"],  # 接口路径（base_url已在request_util中初始化）
             json=success_case["request_data_SkyHash_suanli"]   # 请求参数（JSON格式）
         )
 
 
         # 3. 解析响应体（JSON格式）
         resp_json = resp.json()
-
+        # 2. 提取token并设置全局token（核心）
+        token = resp_json["body"]["token"]  # 根据实际返回路径调整
+        token_manager.set_token(token)  # 存入全局token管理器
         # 4. 断言（核心校验，确保登录成功）
         # 4.1 断言HTTP状态码
         assert resp.status_code == success_case["expected_code"], \

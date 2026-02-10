@@ -1,0 +1,16 @@
+安装 Allure 命令行工具（核心）
+
+Windows操作说明：
+1：下载 Allure 压缩包：https://github.com/allure-framework/allure2/releases（选 allure-2.XX.X.zip）；
+2：解压到本地（比如 D:\allure-2.24.0）；
+3：；将 D:\allure-2.24.0\bin 加入系统环境变量 PATH；
+4：验证：cmd 输入 allure --version，显示版本即成功。
+
+Linux/Mac操作说明：
+# Linux（Ubuntu/Debian）
+sudo apt-get install allure
+# Mac（需先装brew）
+brew install allure
+
+执行参见：
+run_tests.py文件中的代码
