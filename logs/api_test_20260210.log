@@ -1,0 +1,504 @@
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:20:41 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:21:37 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:22:30 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:22:39 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:23:13 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:24:14 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:28:57 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:32:08 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:32:24 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:57:19 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 11:10:08 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:10:08 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录
+2026-02-10 11:10:08 - api_test - INFO - base_request.py:14 - POST请求：http://10.68.3.104:27869/api/v1/login，参数：{'username': 'test_user', 'password': 'aff8c7c4f8d9fab3bb7322ea79cc5170', 'timestamp': 1770693008}
+2026-02-10 11:10:08 - api_test - INFO - base_request.py:16 - 响应：405，<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.29.5</center>
+</body>
+</html>
+
+2026-02-10 11:10:08 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:10:19 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:10:19 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录
+2026-02-10 11:10:19 - api_test - INFO - base_request.py:14 - POST请求：http://10.68.3.104:27869/api/v1/login，参数：{'username': 'test_user', 'password': 'aff8c7c4f8d9fab3bb7322ea79cc5170', 'timestamp': 1770693019}
+2026-02-10 11:10:19 - api_test - INFO - base_request.py:16 - 响应：405，<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.29.5</center>
+</body>
+</html>
+
+2026-02-10 11:10:19 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:12:07 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:12:07 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录
+2026-02-10 11:12:07 - api_test - INFO - base_request.py:14 - POST请求：http://10.68.3.104:27869/syslogin/admin/user/login，参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ=='}
+2026-02-10 11:12:07 - api_test - INFO - base_request.py:16 - 响应：405，<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.29.5</center>
+</body>
+</html>
+
+2026-02-10 11:12:08 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:12:58 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:12:58 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录
+2026-02-10 11:12:58 - api_test - INFO - base_request.py:14 - POST请求：http://10.68.3.106:28397/syslogin/admin/user/login，参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ=='}
+2026-02-10 11:12:59 - api_test - INFO - base_request.py:16 - 响应：200，{"code":1001,"msg":"field \"captchaId\" is not set"}
+2026-02-10 11:12:59 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:13:44 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:13:44 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录
+2026-02-10 11:13:44 - api_test - INFO - base_request.py:14 - POST请求：http://10.68.3.106:28397/syslogin/admin/user/login，参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ==', 'captchaId': '', 'verifyCode': ''}
+2026-02-10 11:13:44 - api_test - INFO - base_request.py:16 - 响应：200，{"code":200,"msg":"success","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibGFpdHkud2FuZyIsImFnZW50SWQiOjAsImV4cCI6MTc3MDc3OTYyNCwiaWF0IjoxNzcwNjkzMjI0LCJ1c2VyRGVwdElkIjoxLCJ1c2VySWQiOjExM30.BzK8TjutPWYHG4KS2mk-rN20ErIKT-vVMcPYx8cpIS8"}}
+2026-02-10 11:13:44 - api_test - INFO - test_login.py:24 - 用例执行成功
+2026-02-10 11:13:44 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:34:03 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:34:03 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:34:03 - api_test - INFO - base_request.py:19 - POST请求：http://10.68.3.106:28397/syslogin/admin/user/login，参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ==', 'captchaId': '', 'verifyCode': ''}，头信息：{'Content-Type': 'application/json'}
+2026-02-10 11:34:03 - api_test - INFO - base_request.py:21 - 响应：200，{"code":200,"msg":"success","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibGFpdHkud2FuZyIsImFnZW50SWQiOjAsImV4cCI6MTc3MDc4MDg0MywiaWF0IjoxNzcwNjk0NDQzLCJ1c2VyRGVwdElkIjoxLCJ1c2VySWQiOjExM30.rns3p0V9cloKHUa2WDCqZP5nBBYd5NQF2BovvSn5_-c"}}
+2026-02-10 11:34:03 - api_test - INFO - test_login.py:23 - 用例执行成功
+2026-02-10 11:34:03 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:36:58 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:36:58 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:36:58 - api_test - INFO - base_request.py:19 - POST请求：http://10.68.3.106:28397/syslogin/admin/user/login，参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ==', 'captchaId': '', 'verifyCode': ''}，头信息：{'Content-Type': 'application/json'}
+2026-02-10 11:36:58 - api_test - INFO - base_request.py:21 - 响应：200，{"code":200,"msg":"success","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibGFpdHkud2FuZyIsImFnZW50SWQiOjAsImV4cCI6MTc3MDc4MTAxOCwiaWF0IjoxNzcwNjk0NjE4LCJ1c2VyRGVwdElkIjoxLCJ1c2VySWQiOjExM30.iPt34gTU4q33us69W5ODM79luSAWFRWQyWmmFen5ifo"}}
+2026-02-10 11:36:58 - api_test - INFO - test_login.py:23 - 用例执行成功
+2026-02-10 11:36:58 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:37:45 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:37:45 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:37:45 - api_test - INFO - base_request.py:19 - POST请求：http://10.68.3.106:28397/syslogin/admin/user/login，参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ==', 'captchaId': '', 'verifyCode': ''}，头信息：{'Content-Type': 'application/json'}
+2026-02-10 11:37:45 - api_test - INFO - base_request.py:21 - 响应：200，{"code":200,"msg":"success","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibGFpdHkud2FuZyIsImFnZW50SWQiOjAsImV4cCI6MTc3MDc4MTA2NSwiaWF0IjoxNzcwNjk0NjY1LCJ1c2VyRGVwdElkIjoxLCJ1c2VySWQiOjExM30.HJSrrUrQD8SwwVwOXK6MYwvfDfAApV_OjQt7UDInP_Y"}}
+2026-02-10 11:37:45 - api_test - INFO - test_login.py:23 - 用例执行成功
+2026-02-10 11:37:45 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:42:13 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:42:13 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:42:13 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:44:25 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:44:25 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:44:25 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:45:06 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:45:06 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:45:07 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:47:32 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:47:32 - api_test - INFO - test_login.py:25 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:47:32 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.106:28397/syslogin/admin/user/login
+2026-02-10 11:47:32 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 11:47:32 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.106:28397/syslogin/admin/user/login
+2026-02-10 11:47:32 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 11:47:32 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ==', 'captchaId': '', 'verifyCode': ''}
+2026-02-10 11:47:32 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 11:47:33 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 11:47:33 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 11:47:33 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.5', 'Date': 'Tue, 10 Feb 2026 03:47:33 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '260', 'Connection': 'keep-alive', 'Traceparent': '00-01412fdfc4118e926905bf7fbf049d45-b2a74b869d8db73e-00'}
+2026-02-10 11:47:33 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'code': 200, 'msg': 'success', 'data': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibGFpdHkud2FuZyIsImFnZW50SWQiOjAsImV4cCI6MTc3MDc4MTY1MywiaWF0IjoxNzcwNjk1MjUzLCJ1c2VyRGVwdElkIjoxLCJ1c2VySWQiOjExM30.fiyjjmEQEwXKqEfNYy3bWDzUk2oI8SsB7E-7ngWdVbM'}}
+2026-02-10 11:47:33 - api_test - INFO - test_login.py:51 - 用例执行成功
+2026-02-10 11:47:33 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:56:48 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:56:48 - api_test - INFO - test_login.py:25 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:56:48 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.106:28397/syslogin/admin/user/login
+2026-02-10 11:56:48 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 11:56:48 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.106:28397/syslogin/admin/user/login
+2026-02-10 11:56:48 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 11:56:48 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ==', 'captchaId': '', 'verifyCode': ''}
+2026-02-10 11:56:48 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 11:56:49 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 11:56:49 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 11:56:49 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.5', 'Date': 'Tue, 10 Feb 2026 03:56:49 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '260', 'Connection': 'keep-alive', 'Traceparent': '00-f6ba6e5997b6b52afc76903d63436f71-836e955e0c1a6de4-00'}
+2026-02-10 11:56:49 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'code': 200, 'msg': 'success', 'data': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibGFpdHkud2FuZyIsImFnZW50SWQiOjAsImV4cCI6MTc3MDc4MjIwOSwiaWF0IjoxNzcwNjk1ODA5LCJ1c2VyRGVwdElkIjoxLCJ1c2VySWQiOjExM30.8ZifV0IQgye7gw6Ylwjnpadyd1m573Ge190QS-WaCOM'}}
+2026-02-10 11:56:49 - api_test - INFO - test_login.py:51 - 用例执行成功
+2026-02-10 11:56:49 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:59:12 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:59:12 - api_test - INFO - test_login.py:25 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:59:12 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/syslogin/admin/user/login
+2026-02-10 11:59:12 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 11:59:12 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/syslogin/admin/user/login
+2026-02-10 11:59:12 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 11:59:12 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 11:59:12 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 11:59:12 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 11:59:12 - api_test - INFO - base_request.py:132 - 响应状态码：405
+2026-02-10 11:59:12 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 03:59:12 GMT', 'Content-Type': 'text/html', 'Content-Length': '157', 'Connection': 'keep-alive'}
+2026-02-10 11:59:12 - api_test - INFO - base_request.py:138 - 响应体（文本）：<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.29.4</center>
+</body>
+</html>
+
+2026-02-10 11:59:12 - api_test - ERROR - base_request.py:151 - POST请求失败：http://10.68.3.104:28765/syslogin/admin/user/login，HTTP错误，状态码：405，错误信息：405 Client Error: Not Allowed for url: http://10.68.3.104:28765/syslogin/admin/user/login
+2026-02-10 11:59:12 - api_test - ERROR - test_login.py:55 - 用例执行失败：HTTP请求失败：状态码405，405 Client Error: Not Allowed for url: http://10.68.3.104:28765/syslogin/admin/user/login
+Traceback (most recent call last):
+  File "D:\LaityTest\api_test_framework\core\base_request.py", line 141, in _request
+    response.raise_for_status()
+  File "D:\laity.wang-test\Tools\Python_3.10\lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 405 Client Error: Not Allowed for url: http://10.68.3.104:28765/syslogin/admin/user/login
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\LaityTest\api_test_framework\test_cases\test_login.py", line 29, in test_login_success
+    resp = request_util.post(
+  File "D:\LaityTest\api_test_framework\core\base_request.py", line 184, in post
+    return self._request(method="POST", path=path, json=json, data=data, files=files, **kwargs)
+  File "D:\LaityTest\api_test_framework\core\base_request.py", line 152, in _request
+    raise RequestException(f"HTTP请求失败：状态码{response.status_code}，{str(e)}") from e
+requests.exceptions.RequestException: HTTP请求失败：状态码405，405 Client Error: Not Allowed for url: http://10.68.3.104:28765/syslogin/admin/user/login
+2026-02-10 11:59:12 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:59:44 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:59:44 - api_test - INFO - test_login.py:25 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:59:44 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 11:59:44 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 11:59:44 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 11:59:44 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 11:59:44 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 11:59:44 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 11:59:44 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 11:59:44 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 11:59:44 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 03:59:44 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-95b73f0ff363f58498ab77b8de9c119f-0132429e079f98b7-00'}
+2026-02-10 11:59:44 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210115944287'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDMxODQsImlhdCI6MTc3MDY5NTk4NH0.MkeBuSx4smPvhO6BglZZCVuMn_sJvZlYy4p-3wuaZnY', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 11:59:44 - api_test - ERROR - test_login.py:55 - 用例执行失败：'code'
+Traceback (most recent call last):
+  File "D:\LaityTest\api_test_framework\test_cases\test_login.py", line 42, in test_login_success
+    assert resp_json["code"] == 200, f"业务码错误：预期200，实际{resp_json['code']}"
+KeyError: 'code'
+2026-02-10 11:59:44 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:00:18 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:00:18 - api_test - INFO - test_login.py:25 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:00:18 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:00:18 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:00:18 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:00:18 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:00:18 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:00:18 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:00:18 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:00:18 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:00:18 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:00:18 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-4ee20a2adf35021990e2accb874344d4-5d0f008300f778a5-00'}
+2026-02-10 12:00:18 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210120018900'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDMyMTgsImlhdCI6MTc3MDY5NjAxOH0.z4bE0_hKxz9FQHdHDezU-L8ruYo8UQEMh27KGh80H3g', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:00:18 - api_test - ERROR - test_login.py:55 - 用例执行失败：'code'
+Traceback (most recent call last):
+  File "D:\LaityTest\api_test_framework\test_cases\test_login.py", line 42, in test_login_success
+    assert resp_json["code"] == 0, f"业务码错误：预期200，实际{resp_json['code']}"
+KeyError: 'code'
+2026-02-10 12:00:18 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:00:59 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:00:59 - api_test - INFO - test_login.py:25 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:00:59 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:00:59 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:00:59 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:00:59 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:00:59 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:00:59 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:00:59 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:00:59 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:00:59 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:00:59 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-93b6d45a9002bc78e0ff47270b0287eb-269567e00876b330-00'}
+2026-02-10 12:00:59 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210120059577'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDMyNTksImlhdCI6MTc3MDY5NjA1OX0.s4MqpoFRf7h-pzCnNTtn0SnbeOJoCgm4kY_H1u-5osc', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:00:59 - api_test - ERROR - test_login.py:55 - 用例执行失败：'code'
+Traceback (most recent call last):
+  File "D:\LaityTest\api_test_framework\test_cases\test_login.py", line 42, in test_login_success
+    assert resp_json["code"] == 0, f"业务码错误：预期0，实际{resp_json['code']}"
+KeyError: 'code'
+2026-02-10 12:00:59 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:04:26 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:04:26 - api_test - INFO - test_login.py:25 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:04:26 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:04:26 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:04:26 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:04:26 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:04:26 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:04:26 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:04:26 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:04:26 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:04:26 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:04:26 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-3a132b9096651ce971b1d7bc6177a3d4-c449630c80503646-00'}
+2026-02-10 12:04:26 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210120426679'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDM0NjYsImlhdCI6MTc3MDY5NjI2Nn0.3QAzWlq-gTUTXahBi01N36uQyhwcGZuoAOIuPbv5gs0', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:10:46 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:11:32 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:11:32 - api_test - INFO - test_login.py:25 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:11:32 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:11:32 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:11:32 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:11:32 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:11:32 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:11:32 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:11:32 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:11:32 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:11:32 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:11:32 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-e01a6f6908557df41eb4aef707d0d4ef-566de2b6ed49a9d1-00'}
+2026-02-10 12:11:32 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210121132634'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDM4OTIsImlhdCI6MTc3MDY5NjY5Mn0.QUvSR2UPZoSy9PP9XXTWVUKNP1z9SOAovfV9j-dC8xA', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:11:32 - api_test - ERROR - test_login.py:55 - 用例执行失败：'bady'
+Traceback (most recent call last):
+  File "D:\LaityTest\api_test_framework\test_cases\test_login.py", line 47, in test_login_success
+    assert "token" in resp_json["bady"], "响应数据中无token，登录失败"
+KeyError: 'bady'
+2026-02-10 12:11:32 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:14:40 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:14:40 - api_test - INFO - test_login.py:25 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:14:40 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:14:40 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:14:40 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:14:40 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:14:40 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:14:40 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:14:41 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:14:41 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:14:41 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:14:41 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-8a5c8b11e12500b6c285d5d9ef56294d-e8e1f7ee92318ed4-00'}
+2026-02-10 12:14:41 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210121441240'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDQwODEsImlhdCI6MTc3MDY5Njg4MX0.sY7bCMzaEcB5Me_EIsr7dRwRFmRElECaSbH_-pSgAVw', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:14:41 - api_test - ERROR - test_login.py:55 - 用例执行失败：'data'
+Traceback (most recent call last):
+  File "D:\LaityTest\api_test_framework\test_cases\test_login.py", line 47, in test_login_success
+    assert "token" in resp_json["data"], "响应数据中无token，登录失败"
+KeyError: 'data'
+2026-02-10 12:14:41 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:15:03 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:15:03 - api_test - INFO - test_login.py:25 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:15:03 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:15:03 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:15:03 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:15:03 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:15:03 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:15:03 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:15:03 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:15:03 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:15:03 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:15:03 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-835610c1e0098afa9d36db277a098e6d-f93ca24c4b124d2c-00'}
+2026-02-10 12:15:03 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210121503682'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDQxMDMsImlhdCI6MTc3MDY5NjkwM30.vZktTgm4h5-Lu-43HhJ02eKOgkn5SZg9Zrsxyoev5Jg', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:15:03 - api_test - ERROR - test_login.py:55 - 用例执行失败：'data'
+Traceback (most recent call last):
+  File "D:\LaityTest\api_test_framework\test_cases\test_login.py", line 47, in test_login_success
+    assert "token" in resp_json["data"], "响应数据中无token，登录失败"
+KeyError: 'data'
+2026-02-10 12:15:03 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:15:16 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:15:16 - api_test - INFO - test_login.py:25 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:15:16 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:15:16 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:15:16 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:15:16 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:15:16 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:15:16 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:15:16 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:15:16 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:15:16 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:15:16 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-e7600252de361fee0aec78e51834f5a5-4120e6f1e441a603-00'}
+2026-02-10 12:15:16 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210121516681'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDQxMTYsImlhdCI6MTc3MDY5NjkxNn0.kXsTjbkRNZdXxB6k3TAFOMcRbxca93VSAhAyRPj1JuA', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:15:16 - api_test - INFO - test_login.py:51 - 用例执行成功
+2026-02-10 12:15:16 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:15:49 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:15:49 - api_test - INFO - test_login.py:27 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:15:49 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:15:49 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:15:49 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:15:49 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:15:49 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:15:49 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:15:49 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:15:49 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:15:49 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:15:49 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-ed0aba038e3259eed7280370cfab346c-32b833e9981a2d89-00'}
+2026-02-10 12:15:49 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210121549461'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDQxNDksImlhdCI6MTc3MDY5Njk0OX0.gA8bpzPtwF1UZS4Ngylneiof7h1x_a48tEBKE4WkSm4', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:15:49 - api_test - INFO - test_login.py:53 - 用例执行成功
+2026-02-10 12:15:49 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:21:26 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:21:26 - api_test - INFO - test_login.py:28 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:21:27 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:21:58 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:21:58 - api_test - INFO - test_login.py:28 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:21:58 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:22:02 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:22:02 - api_test - INFO - test_login.py:28 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:22:02 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:24:52 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:24:52 - api_test - INFO - test_login.py:28 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:24:52 - api_test - INFO - test_login.py:32 - [{'result': 1}]
+2026-02-10 12:24:52 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:24:52 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:24:52 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:24:52 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:24:52 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:24:52 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:24:52 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:24:52 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:24:52 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:24:52 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-fc873cc0f4fb9d7507270dd2486f0111-0125fc12df359e2c-00'}
+2026-02-10 12:24:52 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210122452152'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDQ2OTIsImlhdCI6MTc3MDY5NzQ5Mn0.FKhHlxj9smr4t67CKJPuFNtCxWHODcf0Pg0hVdLuD6M', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:24:52 - api_test - INFO - test_login.py:59 - 用例执行成功
+2026-02-10 12:24:52 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:25:18 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:25:18 - api_test - INFO - test_login.py:28 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:25:18 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:25:18 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:25:18 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:25:18 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:25:18 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:25:18 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:25:18 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:25:18 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:25:18 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:25:18 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '573', 'Connection': 'keep-alive', 'Traceparent': '00-a231fb983a3ff989358390153cf1efa3-6ab4a87ddb724dea-00'}
+2026-02-10 12:25:18 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_2026021012251899'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDQ3MTgsImlhdCI6MTc3MDY5NzUxOH0.DqvkcKJ2COkRluLAIYNVUhstP1wKI76dTCkOeBU24RY', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:25:18 - api_test - INFO - test_login.py:59 - 用例执行成功
+2026-02-10 12:25:18 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:25:40 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 12:25:40 - api_test - INFO - test_login.py:28 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:25:40 - api_test - INFO - test_login.py:32 - [{'result': 1}]
+2026-02-10 12:25:40 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:25:40 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:25:40 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:25:40 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:25:40 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:25:40 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:25:40 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:25:40 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:25:40 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:25:40 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-45eed7d708ebcde442c3aa3e75d2e360-2c2ff0aea3d86b2f-00'}
+2026-02-10 12:25:40 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210122540158'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDQ3NDAsImlhdCI6MTc3MDY5NzU0MH0.F3dvyV7lmJOS6RoMVum1lmKwDo5e5h6vR7gKHgKlAGg', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:25:40 - api_test - INFO - test_login.py:59 - 用例执行成功
+2026-02-10 12:25:40 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 12:27:47 - api_test - INFO - db_operation.py:25 - 数据库连接成功
+2026-02-10 12:27:47 - api_test - INFO - test_login.py:28 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:27:47 - api_test - INFO - db_operation.py:40 - SQL查询成功，结果行数：1
+2026-02-10 12:27:47 - api_test - INFO - test_login.py:32 - [{'result': 1}]
+2026-02-10 12:27:47 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:27:47 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:27:47 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:27:47 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:27:47 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:27:47 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:27:47 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:27:47 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:27:47 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:27:47 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-4b6ea9c91543c2de0460fe72607ce1b0-7caf2765a5c6bfa4-00'}
+2026-02-10 12:27:47 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210122747722'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDQ4NjcsImlhdCI6MTc3MDY5NzY2N30.Beut33FPmPBBypRHfpMsbXSb93FHu7MCe8p0VVs88DE', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:27:47 - api_test - INFO - test_login.py:59 - 用例执行成功
+2026-02-10 12:27:47 - api_test - INFO - db_operation.py:69 - 数据库连接已关闭
+2026-02-10 12:28:37 - api_test - INFO - db_operation.py:25 - 数据库连接成功
+2026-02-10 12:28:37 - api_test - INFO - test_login.py:28 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:28:37 - api_test - INFO - db_operation.py:40 - SQL查询成功，结果行数：1
+2026-02-10 12:28:37 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:28:37 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:28:37 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:28:37 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:28:37 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:28:37 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:28:37 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:28:37 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:28:37 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:28:37 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-91899f6fb0c881da53e6fbadb77d8942-49c558269acf3592-00'}
+2026-02-10 12:28:37 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210122837159'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDQ5MTcsImlhdCI6MTc3MDY5NzcxN30.ezSOKufc7822J_WHEYjFJ2apv7O9Ol63SVB19TK7jj8', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:28:37 - api_test - INFO - test_login.py:59 - 用例执行成功
+2026-02-10 12:28:37 - api_test - INFO - db_operation.py:69 - 数据库连接已关闭
+2026-02-10 12:29:59 - api_test - INFO - db_operation.py:25 - 数据库连接成功
+2026-02-10 12:29:59 - api_test - INFO - test_login.py:28 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:29:59 - api_test - INFO - db_operation.py:40 - SQL查询成功，结果行数：1
+2026-02-10 12:29:59 - api_test - INFO - test_login.py:32 - sql的查询在这里[{'result': 1}]
+2026-02-10 12:29:59 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:29:59 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:29:59 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:29:59 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:29:59 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:29:59 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:29:59 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:29:59 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:29:59 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:29:59 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-f2608cb6022b33fcbfa618ca020622f0-9683b2b0258e0510-00'}
+2026-02-10 12:29:59 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210122959763'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDQ5OTksImlhdCI6MTc3MDY5Nzc5OX0.4ErkWEnlaj6n9NTV2ooU-az6bv8_U5BxKZL0G2zFsjA', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:29:59 - api_test - INFO - test_login.py:59 - 用例执行成功
+2026-02-10 12:29:59 - api_test - INFO - db_operation.py:69 - 数据库连接已关闭
+2026-02-10 12:30:23 - api_test - INFO - db_operation.py:25 - 数据库连接成功
+2026-02-10 12:30:23 - api_test - INFO - test_login.py:28 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 12:30:23 - api_test - INFO - db_operation.py:40 - SQL查询成功，结果行数：1
+2026-02-10 12:30:23 - api_test - INFO - test_login.py:32 - sql的查询在这里[{'result': 1}]
+2026-02-10 12:30:23 - api_test - INFO - test_login.py:34 - sql的查询在这里：[{'result': 1}]
+2026-02-10 12:30:23 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:30:23 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 12:30:23 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 12:30:23 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 12:30:23 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 12:30:23 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 12:30:24 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 12:30:24 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 12:30:24 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 04:30:24 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '573', 'Connection': 'keep-alive', 'Traceparent': '00-38b620889d6ce2e52477ddca5206e60f-b84a5197392aa395-00'}
+2026-02-10 12:30:24 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_2026021012302353'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MDUwMjMsImlhdCI6MTc3MDY5NzgyM30.EEnhfEMbz95cq3M4lFaV_hh7M-TEkfKI62fHNmsJCVU', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 12:30:24 - api_test - INFO - test_login.py:61 - 用例执行成功
+2026-02-10 12:30:24 - api_test - INFO - db_operation.py:69 - 数据库连接已关闭
+2026-02-10 14:03:21 - api_test - INFO - db_operation.py:25 - 数据库连接成功
+2026-02-10 14:03:21 - api_test - INFO - test_login.py:28 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 14:03:21 - api_test - INFO - db_operation.py:40 - SQL查询成功，结果行数：1
+2026-02-10 14:03:21 - api_test - INFO - test_login.py:32 - sql的查询在这里[{'result': 1}]
+2026-02-10 14:03:21 - api_test - INFO - test_login.py:34 - sql的查询在这里：[{'result': 1}]
+2026-02-10 14:03:21 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 14:03:21 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 14:03:21 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.104:28765/cdpapi/v1/cdp/admin/user/login
+2026-02-10 14:03:21 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 14:03:21 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laityadmin', 'password': 'wxNlFclzoKyK4ljtj/yLvQ==', 'platform': 1}
+2026-02-10 14:03:21 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 14:03:21 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 14:03:21 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 14:03:21 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.4', 'Date': 'Tue, 10 Feb 2026 06:03:21 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '574', 'Connection': 'keep-alive', 'Traceparent': '00-8a21734d7ff5dba1bcd943d9c8140aaf-328d685b2c603c40-00'}
+2026-02-10 14:03:21 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'ret': {'code': 0, 'msg': 'success', 'request_id': 'cdp_20260210140321318'}, 'body': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMDAsInVzZXJfbmFtZSI6ImxhaXR5YWRtaW4iLCJyb2xlX2lkIjo2LCJwbGF0Zm9ybSI6MSwiaXNfYWRtaW4iOmZhbHNlLCJleHAiOjE3NzA3MTA2MDEsImlhdCI6MTc3MDcwMzQwMX0.F_Eoz-kDq_a7MAOh0ZY3ktLv9KdBY4WdRucCnBSy-Qk', 'user_info': {'id': 300, 'account': 'laityadmin', 'nickname': 'laityadmin', 'avatar': '', 'mobile': '', 'role_id': 6, 'area_ids': [6090], 'area_names': None, 'area_regions': None, 'biz_ids': None, 'biz_names': [], 'biz_regions': None, 'platform': 1, 'status': 1, 'remark': ''}}}
+2026-02-10 14:03:21 - api_test - INFO - test_login.py:61 - 用例执行成功
+2026-02-10 14:03:21 - api_test - INFO - db_operation.py:69 - 数据库连接已关闭

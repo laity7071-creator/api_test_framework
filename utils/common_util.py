@@ -61,7 +61,7 @@ def get_env_base_url(env="test"):
     # 拼接环境配置段（如 env=test → ENV_TEST）
     env_section = f"ENV_{env.upper()}"
     # 调用上面的read_config函数读取对应环境的base_url
-    return read_config(env_section, "base_url")
+    return read_config(env_section, "base_url_SkyHash_suanli")
 
 
 # -------------------------- 基础工具函数（保留之前的核心功能） --------------------------
