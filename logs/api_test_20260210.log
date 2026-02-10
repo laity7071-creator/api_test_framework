@@ -1,0 +1,168 @@
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:20:41 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:20:41 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:21:37 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:21:37 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:22:30 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:22:30 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:22:39 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:22:39 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:23:13 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:23:13 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:24:14 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:24:14 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:28:57 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:28:57 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:32:08 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:32:08 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:32:24 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:32:24 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：ENV.base_url=http://10.68.3.104:27869
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.host=localhost
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.port=3306
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.user=root
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.password=root
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.database=archives
+2026-02-10 10:57:19 - utils.log_util - INFO - common_util.py:37 - 从配置文件读取配置：DATABASE.charset=utf8mb4
+2026-02-10 10:57:19 - utils.log_util - INFO - db_operation.py:96 - 数据库连接已关闭
+2026-02-10 11:10:08 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:10:08 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录
+2026-02-10 11:10:08 - api_test - INFO - base_request.py:14 - POST请求：http://10.68.3.104:27869/api/v1/login，参数：{'username': 'test_user', 'password': 'aff8c7c4f8d9fab3bb7322ea79cc5170', 'timestamp': 1770693008}
+2026-02-10 11:10:08 - api_test - INFO - base_request.py:16 - 响应：405，<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.29.5</center>
+</body>
+</html>
+
+2026-02-10 11:10:08 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:10:19 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:10:19 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录
+2026-02-10 11:10:19 - api_test - INFO - base_request.py:14 - POST请求：http://10.68.3.104:27869/api/v1/login，参数：{'username': 'test_user', 'password': 'aff8c7c4f8d9fab3bb7322ea79cc5170', 'timestamp': 1770693019}
+2026-02-10 11:10:19 - api_test - INFO - base_request.py:16 - 响应：405，<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.29.5</center>
+</body>
+</html>
+
+2026-02-10 11:10:19 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:12:07 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:12:07 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录
+2026-02-10 11:12:07 - api_test - INFO - base_request.py:14 - POST请求：http://10.68.3.104:27869/syslogin/admin/user/login，参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ=='}
+2026-02-10 11:12:07 - api_test - INFO - base_request.py:16 - 响应：405，<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.29.5</center>
+</body>
+</html>
+
+2026-02-10 11:12:08 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:12:58 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:12:58 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录
+2026-02-10 11:12:58 - api_test - INFO - base_request.py:14 - POST请求：http://10.68.3.106:28397/syslogin/admin/user/login，参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ=='}
+2026-02-10 11:12:59 - api_test - INFO - base_request.py:16 - 响应：200，{"code":1001,"msg":"field \"captchaId\" is not set"}
+2026-02-10 11:12:59 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:13:44 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:13:44 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录
+2026-02-10 11:13:44 - api_test - INFO - base_request.py:14 - POST请求：http://10.68.3.106:28397/syslogin/admin/user/login，参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ==', 'captchaId': '', 'verifyCode': ''}
+2026-02-10 11:13:44 - api_test - INFO - base_request.py:16 - 响应：200，{"code":200,"msg":"success","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibGFpdHkud2FuZyIsImFnZW50SWQiOjAsImV4cCI6MTc3MDc3OTYyNCwiaWF0IjoxNzcwNjkzMjI0LCJ1c2VyRGVwdElkIjoxLCJ1c2VySWQiOjExM30.BzK8TjutPWYHG4KS2mk-rN20ErIKT-vVMcPYx8cpIS8"}}
+2026-02-10 11:13:44 - api_test - INFO - test_login.py:24 - 用例执行成功
+2026-02-10 11:13:44 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:34:03 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:34:03 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:34:03 - api_test - INFO - base_request.py:19 - POST请求：http://10.68.3.106:28397/syslogin/admin/user/login，参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ==', 'captchaId': '', 'verifyCode': ''}，头信息：{'Content-Type': 'application/json'}
+2026-02-10 11:34:03 - api_test - INFO - base_request.py:21 - 响应：200，{"code":200,"msg":"success","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibGFpdHkud2FuZyIsImFnZW50SWQiOjAsImV4cCI6MTc3MDc4MDg0MywiaWF0IjoxNzcwNjk0NDQzLCJ1c2VyRGVwdElkIjoxLCJ1c2VySWQiOjExM30.rns3p0V9cloKHUa2WDCqZP5nBBYd5NQF2BovvSn5_-c"}}
+2026-02-10 11:34:03 - api_test - INFO - test_login.py:23 - 用例执行成功
+2026-02-10 11:34:03 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:36:58 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:36:58 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:36:58 - api_test - INFO - base_request.py:19 - POST请求：http://10.68.3.106:28397/syslogin/admin/user/login，参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ==', 'captchaId': '', 'verifyCode': ''}，头信息：{'Content-Type': 'application/json'}
+2026-02-10 11:36:58 - api_test - INFO - base_request.py:21 - 响应：200，{"code":200,"msg":"success","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibGFpdHkud2FuZyIsImFnZW50SWQiOjAsImV4cCI6MTc3MDc4MTAxOCwiaWF0IjoxNzcwNjk0NjE4LCJ1c2VyRGVwdElkIjoxLCJ1c2VySWQiOjExM30.iPt34gTU4q33us69W5ODM79luSAWFRWQyWmmFen5ifo"}}
+2026-02-10 11:36:58 - api_test - INFO - test_login.py:23 - 用例执行成功
+2026-02-10 11:36:58 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:37:45 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:37:45 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:37:45 - api_test - INFO - base_request.py:19 - POST请求：http://10.68.3.106:28397/syslogin/admin/user/login，参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ==', 'captchaId': '', 'verifyCode': ''}，头信息：{'Content-Type': 'application/json'}
+2026-02-10 11:37:45 - api_test - INFO - base_request.py:21 - 响应：200，{"code":200,"msg":"success","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibGFpdHkud2FuZyIsImFnZW50SWQiOjAsImV4cCI6MTc3MDc4MTA2NSwiaWF0IjoxNzcwNjk0NjY1LCJ1c2VyRGVwdElkIjoxLCJ1c2VySWQiOjExM30.HJSrrUrQD8SwwVwOXK6MYwvfDfAApV_OjQt7UDInP_Y"}}
+2026-02-10 11:37:45 - api_test - INFO - test_login.py:23 - 用例执行成功
+2026-02-10 11:37:45 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:42:13 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:42:13 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:42:13 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:44:25 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:44:25 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:44:25 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:45:06 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:45:06 - api_test - INFO - test_login.py:9 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:45:07 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
+2026-02-10 11:47:32 - api_test - INFO - db_operation.py:24 - 数据库连接成功
+2026-02-10 11:47:32 - api_test - INFO - test_login.py:25 - 开始执行用例：正常登录-账号密码正确
+2026-02-10 11:47:32 - api_test - INFO - base_request.py:75 - 拼接完整URL：http://10.68.3.106:28397/syslogin/admin/user/login
+2026-02-10 11:47:32 - api_test - INFO - base_request.py:98 - ===== 开始POST请求 =====
+2026-02-10 11:47:32 - api_test - INFO - base_request.py:99 - 请求URL：http://10.68.3.106:28397/syslogin/admin/user/login
+2026-02-10 11:47:32 - api_test - INFO - base_request.py:100 - 请求头：{'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'ApiTestFramework/1.0'}
+2026-02-10 11:47:32 - api_test - INFO - base_request.py:105 - JSON请求参数：{'account': 'laity.wang', 'systemHost': 'esport-diskless-v1', 'password': 'fKvOcEwY+O8ylM2CV8BHrQ==', 'captchaId': '', 'verifyCode': ''}
+2026-02-10 11:47:32 - api_test - INFO - base_request.py:107 - 表单请求参数：None
+2026-02-10 11:47:33 - api_test - INFO - base_request.py:131 - ===== POST请求响应 =====
+2026-02-10 11:47:33 - api_test - INFO - base_request.py:132 - 响应状态码：200
+2026-02-10 11:47:33 - api_test - INFO - base_request.py:133 - 响应头：{'Server': 'nginx/1.29.5', 'Date': 'Tue, 10 Feb 2026 03:47:33 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '260', 'Connection': 'keep-alive', 'Traceparent': '00-01412fdfc4118e926905bf7fbf049d45-b2a74b869d8db73e-00'}
+2026-02-10 11:47:33 - api_test - INFO - base_request.py:136 - 响应体（JSON）：{'code': 200, 'msg': 'success', 'data': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibGFpdHkud2FuZyIsImFnZW50SWQiOjAsImV4cCI6MTc3MDc4MTY1MywiaWF0IjoxNzcwNjk1MjUzLCJ1c2VyRGVwdElkIjoxLCJ1c2VySWQiOjExM30.fiyjjmEQEwXKqEfNYy3bWDzUk2oI8SsB7E-7ngWdVbM'}}
+2026-02-10 11:47:33 - api_test - INFO - test_login.py:51 - 用例执行成功
+2026-02-10 11:47:33 - api_test - INFO - db_operation.py:44 - 数据库连接已关闭
