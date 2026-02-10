@@ -1,72 +1,88 @@
-"""数据库操作类（适配增删改查，兼容原有逻辑）"""
+"""数据库工具类（仅封装增删改查，无任何用例代码）"""
 import pymysql
-from utils.common_util import read_config
 from utils.log_util import logger
+from utils.common_util import read_config
 
 class DBOperation:
-    def __init__(self):
-        self.host = read_config("DATABASE", "host")
-        self.port = int(read_config("DATABASE", "port"))
-        self.user = read_config("DATABASE", "user")
-        self.password = read_config("DATABASE", "password")
-        self.database = read_config("DATABASE", "database")
-        self.charset = read_config("DATABASE", "charset")
+    def __init__(self, env="test"):
+        # 读取指定环境的数据库配置
+        env_section = f"ENV_{env.upper()}"
+        self.host = read_config(env_section, "db_host")
+        self.port = int(read_config(env_section, "db_port"))
+        self.user = read_config(env_section, "db_user")
+        self.password = read_config(env_section, "db_password")
+        self.db = read_config(env_section, "db_name")
+        self.charset = "utf8mb4"
+        # 初始化连接/游标
         self.conn = None
         self.cursor = None
 
     def connect(self):
-        """建立数据库连接（原有逻辑，不变）"""
-        try:
-            self.conn = pymysql.connect(
-                host=self.host, port=self.port, user=self.user, password=self.password,
-                database=self.database, charset=self.charset, cursorclass=pymysql.cursors.DictCursor
-            )
-            self.cursor = self.conn.cursor()
-            logger.info("数据库连接成功")
-        except Exception as e:
-            logger.error(f"数据库连接失败：{str(e)}")
-            raise
-
-    def query(self, sql, params=None):
-        """
-        专做【查询（SELECT）】（原有逻辑，不变）
-        :return: 查询结果（列表[字典]）
-        """
-        if not self.conn:
-            self.connect()
-        try:
-            self.cursor.execute(sql, params)
-            result = self.cursor.fetchall()
-            logger.info(f"SQL查询成功，结果行数：{len(result)}")
-            return result
-        except Exception as e:
-            logger.error(f"SQL查询失败：{str(e)}")
-            raise
-
-    def execute(self, sql, params=None):
-        """
-        专做【增/删/改（INSERT/UPDATE/DELETE）】（新增核心方法）
-        :return: 受影响的行数（比如新增1条返回1，修改2条返回2）
-        """
-        if not self.conn:
-            self.connect()
-        try:
-            affected_rows = self.cursor.execute(sql, params)
-            self.conn.commit()  # 关键：增删改必须提交事务，否则数据不生效
-            logger.info(f"SQL执行成功（增/删/改），受影响行数：{affected_rows}")
-            return affected_rows
-        except Exception as e:
-            self.conn.rollback()  # 执行失败则回滚事务，避免脏数据
-            logger.error(f"SQL执行失败（增/删/改）：{str(e)}，已回滚事务")
-            raise
+        """建立数据库连接"""
+        self.conn = pymysql.connect(
+            host=self.host, port=self.port, user=self.user,
+            password=self.password, db=self.db, charset=self.charset,
+            cursorclass=pymysql.cursors.DictCursor  # 返回字典格式
+        )
+        self.cursor = self.conn.cursor()
+        logger.info("数据库连接成功")
 
     def close(self):
-        """关闭数据库连接（原有逻辑，不变）"""
+        """关闭数据库连接"""
         if self.cursor:
             self.cursor.close()
         if self.conn:
             self.conn.close()
         logger.info("数据库连接已关闭")
 
-# 全局实例（原有逻辑，不变）
-db_util = DBOperation()
+    def execute(self, sql):
+        """执行单条SQL（增/删/改，自动提交）"""
+        try:
+            rows = self.cursor.execute(sql)
+            self.conn.commit()
+            return rows
+        except Exception as e:
+            self.conn.rollback()
+            logger.error(f"SQL执行失败：{sql[:100]} → {e}")
+            raise
+
+    def executemany(self, sql, data_list):
+        """批量执行SQL"""
+        try:
+            rows = self.cursor.executemany(sql, data_list)
+            self.conn.commit()
+            return rows
+        except Exception as e:
+            self.conn.rollback()
+            logger.error(f"批量SQL执行失败 → {e}")
+            raise
+
+    def query_one(self, sql):
+        """查询单条数据"""
+        self.cursor.execute(sql)
+        return self.cursor.fetchone()
+
+    def query_all(self, sql):
+        """查询多条数据"""
+        self.cursor.execute(sql)
+        return self.cursor.fetchall()
+
+    def begin_transaction(self):
+        """开启事务（关闭自动提交）"""
+        self.conn.autocommit(False)
+        logger.info("事务已开启")
+
+    def commit(self):
+        """提交事务"""
+        self.conn.commit()
+        self.conn.autocommit(True)
+        logger.info("事务已提交")
+
+    def rollback(self):
+        """回滚事务"""
+        self.conn.rollback()
+        self.conn.autocommit(True)
+        logger.info("事务已回滚")
+
+# 全局数据库工具对象（供用例直接调用）
+db_util = DBOperation(env="test")
