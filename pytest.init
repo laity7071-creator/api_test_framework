@@ -1,0 +1,7 @@
+# pytest.ini（项目根目录）
+[pytest]
+addopts = -s --no-capture --no-capture-stderr
+testpaths = test_cases
+python_files = test_*.py
+python_classes = Test*
+python_functions = test_*

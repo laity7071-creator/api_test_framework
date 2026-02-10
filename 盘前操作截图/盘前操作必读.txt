@@ -1,0 +1,134 @@
+### 一、需求理解
+你想知道如何下载并安装这套接口测试框架所需的Python依赖包，我会为你提供**分步骤、跨系统**的详细操作指南，同时覆盖常见问题的解决方法，确保依赖安装顺利完成。
+
+### 二、依赖下载安装完整步骤
+#### 前提准备
+首先确认你的电脑已安装**Python**和**pip**（Python包管理工具）：
+1. 打开终端/命令提示符（Windows：Win+R → 输入`cmd`；macOS/Linux：终端）；
+2. 执行以下命令验证：
+   ```bash
+   # 验证Python版本（建议3.8+）
+   python --version  # Windows可能需要用python3
+   # 验证pip版本
+   pip --version     # Windows可能需要用pip3
+   ```
+   - 如果提示“找不到命令”，说明Python未安装或未添加到系统环境变量，需先安装Python（推荐3.8~3.11版本）。
+
+#### 步骤1：定位到框架根目录
+依赖文件`requirements.txt`在框架根目录`api_test_framework/`下，需先进入该目录：
+```bash
+# 示例：假设框架放在桌面（根据你的实际路径修改）
+# Windows
+cd C:\Users\你的用户名\Desktop\api_test_framework
+# macOS/Linux
+cd /Users/你的用户名/Desktop/api_test_framework
+```
+> 小贴士：可以直接在框架根目录的文件管理器空白处，按住`Shift`+右键（Windows）/ 右键选择“新建终端窗口”（macOS），直接打开终端并定位到该目录。
+
+#### 步骤2：执行pip安装命令
+这是核心步骤，执行以下命令下载并安装所有依赖：
+```bash
+# 基础命令（通用）
+pip install -r requirements.txt
+
+# 【推荐】国内用户用镜像源加速（避免下载慢/失败）
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 如果提示权限不足（macOS/Linux）
+sudo pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 如果你的Python3和Python2共存（Windows/macOS/Linux）
+pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+- 命令说明：
+  - `-r requirements.txt`：按文件内的清单批量安装依赖；
+  - `-i 镜像地址`：使用清华镜像源，比官方源快很多；
+  - `sudo`（仅macOS/Linux）：以管理员权限安装，解决权限不足问题。
+
+#### 步骤3：验证依赖是否安装成功
+安装完成后，可验证关键依赖是否安装成功：
+```bash
+# 验证pytest（测试框架）
+pytest --version
+# 验证requests（接口请求）
+python -c "import requests; print(requests.__version__)"
+# 验证pymysql（数据库）
+python -c "import pymysql; print(pymysql.__version__)"
+# 验证paramiko（SSH）
+python -c "import paramiko; print(paramiko.__version__)"
+```
+- 如果无报错且输出版本号，说明依赖安装成功；
+- 如果提示`ModuleNotFoundError`，说明对应包未安装成功，需重新执行安装命令。
+
+### 三、常见问题及解决方法
+#### 问题1：pip版本过低导致安装失败
+```
+ERROR: Could not find a version that satisfies the requirement xxx
+```
+解决：升级pip到最新版本
+```bash
+# Windows
+python -m pip install --upgrade pip
+# macOS/Linux
+pip3 install --upgrade pip
+```
+
+#### 问题2：权限不足（Windows/macOS/Linux）
+```
+PermissionError: [Errno 13] Permission denied
+```
+解决：
+- Windows：以“管理员身份”打开命令提示符，再执行安装命令；
+- macOS/Linux：在命令前加`sudo`（如`sudo pip3 install -r requirements.txt`）。
+
+#### 问题3：依赖冲突（如已安装其他版本的包）
+```
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed
+```
+解决：使用虚拟环境隔离依赖（推荐，避免污染全局Python环境）：
+```bash
+# 1. 创建虚拟环境（框架根目录下）
+python -m venv api_test_env  # Windows用python，macOS/Linux用python3
+
+# 2. 激活虚拟环境
+# Windows（cmd）
+api_test_env\Scripts\activate.bat
+# Windows（PowerShell）
+api_test_env\Scripts\Activate.ps1
+# macOS/Linux
+source api_test_env/bin/activate
+
+# 3. 激活后终端会显示(api_test_env)，再执行安装命令
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 4. 退出虚拟环境（测试完成后）
+deactivate
+```
+
+#### 问题4：paramiko安装失败（macOS/Linux）
+```
+error: command 'gcc' failed with exit status 1
+```
+解决：安装编译依赖（macOS需先装Xcode命令行工具）：
+```bash
+# macOS
+xcode-select --install
+brew install libffi openssl
+
+# Ubuntu/Debian
+sudo apt-get install gcc python3-dev libffi-dev libssl-dev
+
+# CentOS/RHEL
+sudo yum install gcc python3-devel libffi-devel openssl-devel
+```
+安装完成后，重新执行`pip install paramiko`。
+
+### 四、总结
+1. **核心步骤**：确认Python/pip → 进入框架根目录 → 执行`pip install -r requirements.txt`（推荐加清华镜像）；
+2. **避坑要点**：
+   - 国内用户务必用镜像源，避免下载超时；
+   - 权限不足时，Windows用管理员终端，macOS/Linux加`sudo`；
+   - 依赖冲突时，优先用虚拟环境隔离；
+3. **验证方法**：安装后执行版本检查命令，无报错即成功。
+
+安装完成后，你就可以执行`python run_tests.py`运行接口测试框架了。
