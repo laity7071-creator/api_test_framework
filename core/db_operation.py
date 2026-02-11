@@ -1,88 +1,80 @@
-"""数据库工具类（仅封装增删改查，无任何用例代码）"""
 import pymysql
-from utils.log_util import logger
-from utils.common_util import read_config
+import logging
+
+# 初始化logger（如果你的log_util有问题，先兜底）
+logger = logging.getLogger("api_test")
+
 
 class DBOperation:
-    def __init__(self, env="test"):
-        # 读取指定环境的数据库配置
-        env_section = f"ENV_{env.upper()}"
-        self.host = read_config(env_section, "db_host")
-        self.port = int(read_config(env_section, "db_port"))
-        self.user = read_config(env_section, "db_user")
-        self.password = read_config(env_section, "db_password")
-        self.db = read_config(env_section, "db_name")
-        self.charset = "utf8mb4"
-        # 初始化连接/游标
+    def __init__(self, host=None, port=None, user=None, password=None, database=None, charset="utf8mb4", env="test"):
+        """
+        初始化数据库连接
+        :param host: 数据库IP
+        :param port: 端口
+        :param user: 账号
+        :param password: 密码
+        :param database: 库名
+        :param charset: 字符集
+        :param env: 环境（兼容原有逻辑）
+        """
+        # 优先使用直接传参（Web多库场景）
+        self.host = host
+        self.port = port if port else 3306
+        self.user = user
+        self.password = password
+        self.database = database
+        self.charset = charset
+
+        # 兼容旧逻辑（如果没传参，从配置读，这里先注释，避免依赖问题）
+        # if not all([self.host, self.port, self.user, self.password]):
+        #     from utils.config_util import read_config
+        #     self.host = read_config(f"DB_{env.upper()}", "host")
+        #     self.port = int(read_config(f"DB_{env.upper()}", "port"))
+        #     self.user = read_config(f"DB_{env.upper()}", "user")
+        #     self.password = read_config(f"DB_{env.upper()}", "password")
+        #     self.database = read_config(f"DB_{env.upper()}", "database")
+
         self.conn = None
         self.cursor = None
 
     def connect(self):
-        """建立数据库连接"""
-        self.conn = pymysql.connect(
-            host=self.host, port=self.port, user=self.user,
-            password=self.password, db=self.db, charset=self.charset,
-            cursorclass=pymysql.cursors.DictCursor  # 返回字典格式
-        )
-        self.cursor = self.conn.cursor()
-        logger.info("数据库连接成功")
+        """建立数据库连接（关闭DictCursor，改用默认元组游标，避免解析错误）"""
+        try:
+            # 关键修复：移除DictCursor，改用默认游标（返回元组列表，适配x[0]取值）
+            self.conn = pymysql.connect(
+                host=self.host,
+                port=self.port,
+                user=self.user,
+                password=self.password,
+                database=self.database,
+                charset=self.charset,
+                # 核心：注释掉DictCursor，用默认游标！
+                # cursorclass=pymysql.cursors.DictCursor
+            )
+            self.cursor = self.conn.cursor()
+            logger.info("数据库连接成功")
+        except Exception as e:
+            logger.error(f"数据库连接失败：{str(e)}")
+            raise e  # 抛出异常，让上层捕获
 
     def close(self):
-        """关闭数据库连接"""
-        if self.cursor:
-            self.cursor.close()
-        if self.conn:
-            self.conn.close()
-        logger.info("数据库连接已关闭")
-
-    def execute(self, sql):
-        """执行单条SQL（增/删/改，自动提交）"""
+        """安全关闭连接"""
         try:
-            rows = self.cursor.execute(sql)
-            self.conn.commit()
-            return rows
+            if self.cursor:
+                self.cursor.close()
+            if self.conn:
+                self.conn.close()
+            logger.info("数据库连接已关闭")
         except Exception as e:
-            self.conn.rollback()
-            logger.error(f"SQL执行失败：{sql[:100]} → {e}")
-            raise
+            logger.error(f"关闭连接失败：{str(e)}")
 
-    def executemany(self, sql, data_list):
-        """批量执行SQL"""
+    # 补充基础执行方法（确保app.py能调用）
+    def execute(self, sql, params=None):
+        if not self.conn:
+            self.connect()
         try:
-            rows = self.cursor.executemany(sql, data_list)
-            self.conn.commit()
-            return rows
+            self.cursor.execute(sql, params or ())
+            return self.cursor.fetchall()
         except Exception as e:
-            self.conn.rollback()
-            logger.error(f"批量SQL执行失败 → {e}")
-            raise
-
-    def query_one(self, sql):
-        """查询单条数据"""
-        self.cursor.execute(sql)
-        return self.cursor.fetchone()
-
-    def query_all(self, sql):
-        """查询多条数据"""
-        self.cursor.execute(sql)
-        return self.cursor.fetchall()
-
-    def begin_transaction(self):
-        """开启事务（关闭自动提交）"""
-        self.conn.autocommit(False)
-        logger.info("事务已开启")
-
-    def commit(self):
-        """提交事务"""
-        self.conn.commit()
-        self.conn.autocommit(True)
-        logger.info("事务已提交")
-
-    def rollback(self):
-        """回滚事务"""
-        self.conn.rollback()
-        self.conn.autocommit(True)
-        logger.info("事务已回滚")
-
-# 全局数据库工具对象（供用例直接调用）
-db_util = DBOperation(env="test")
+            logger.error(f"执行SQL失败：{str(e)}")
+            raise e

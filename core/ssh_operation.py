@@ -90,13 +90,13 @@ class SSHOperation:
 
 
 # -------------------------- 高层封装：测试用例直接调用 --------------------------
-def exec_ssh_command(command):
+def exec_ssh_command(command, env="test"):
     """
     一键执行SSH命令（测试用例直接调用）
     :param command: 待执行的SSH命令
     :return: (stdout, stderr) 执行结果
     """
-    ssh_obj = SSHOperation()
+    ssh_obj = SSHOperation(env=env)  # 把env传给SSHOperation初始化
     try:
         return ssh_obj.execute_command(command)
     finally:

@@ -2,119 +2,1234 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>测试框架Web控制台</title>
-    <!-- 引入Bootstrap和jQuery（CDN，无需本地下载） -->
-    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_config.title }}</title>
     <style>
-        .container { margin-top: 20px; }
-        .result-box { margin-top: 20px; height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; }
-        .tab-content { margin-top: 10px; }
+        /* 全局样式 - 全屏适配 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #f0f2f5;
+        }
+
+        /* 主容器 - 全屏 */
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 头部样式 */
+        .header {
+            background-color: {{ page_config.theme_color }};
+            color: white;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .header .nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        .header .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .header .nav a:hover {
+            opacity: 1;
+        }
+
+        /* 主体内容 - 弹性布局，占满剩余高度 */
+        .main {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+            padding: 16px;
+            gap: 16px;
+        }
+
+        /* 左侧SQL生成区 */
+        .sql-generator {
+            width: 40%;
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            overflow-y: auto;
+        }
+
+        /* 右侧结果展示区 */
+        .result-area {
+            flex: 1;
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            overflow-y: auto;
+        }
+
+        /* 表单样式 */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d9d9d9;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: {{ page_config.theme_color }};
+            box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2);
+        }
+
+        select.form-control {
+            appearance: none;
+            background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center;
+            padding-right: 36px;
+        }
+
+        /* 按钮样式 */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: {{ page_config.theme_color }};
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0d6efd;
+        }
+
+        .btn-success {
+            background-color: #52c41a;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background-color: #41a917;
+        }
+
+        .btn-danger {
+            background-color: #f5222d;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: #d91822;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid {{ page_config.theme_color }};
+            color: {{ page_config.theme_color }};
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(22, 119, 255, 0.1);
+        }
+
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        /* 条件组样式 */
+        .condition-group {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-left: 3px solid {{ page_config.theme_color }};
+        }
+
+        .condition-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+
+        .condition-row > div {
+            flex: 1;
+        }
+
+        .condition-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        /* 更新字段组样式 */
+        .update-field-group {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-left: 3px solid #52c41a;
+        }
+
+        /* 生成的SQL样式 */
+        .sql-preview {
+            background: #f5f5f5;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 20px 0;
+            font-family: "Consolas", "Monaco", monospace;
+            font-size: 14px;
+            color: #333;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: 1px solid #e8e8e8;
+        }
+
+        /* 结果展示样式 */
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .result-style-select {
+            width: 160px;
+        }
+
+        /* 表格样式 */
+        .result-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+
+        .result-table th, .result-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .result-table th {
+            background-color: #f8f9fa;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .result-table tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* 卡片式样式 */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 1px solid #e8e8e8;
+        }
+
+        .card .card-field {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .card .card-field label {
+            font-weight: 500;
+            color: #666;
+            margin-right: 8px;
+        }
+
+        /* JSON样式 */
+        .json-view {
+            background: #f5f5f5;
+            border-radius: 6px;
+            padding: 16px;
+            font-family: "Consolas", "Monaco", monospace;
+            font-size: 14px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: 1px solid #e8e8e8;
+            margin-top: 16px;
+        }
+
+        /* 加载动画 */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .loading::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ddd;
+            border-top-color: {{ page_config.theme_color }};
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 12px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* 提示信息 */
+        .alert {
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        .alert-success {
+            background-color: #f0f9ff;
+            color: #52c41a;
+            border: 1px solid #b7eb8f;
+        }
+
+        .alert-error {
+            background-color: #fff2f0;
+            color: #f5222d;
+            border: 1px solid #ffccc7;
+        }
+
+        .alert-info {
+            background-color: #e6f7ff;
+            color: #1890ff;
+            border: 1px solid #91d5ff;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 1200px) {
+            .main {
+                flex-direction: column;
+            }
+
+            .sql-generator {
+                width: 100%;
+                height: 50%;
+            }
+
+            .result-area {
+                height: 50%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2 class="text-center">测试框架Web控制台</h2>
+        <!-- 头部 -->
+        <div class="header">
+            <h1>{{ page_config.title }}</h1>
+            <div class="nav">
+                <a href="/">可视化SQL生成</a>
+                <a href="/saved_sql">已保存SQL配置</a>
+                <a href="/api/init_web_db" onclick="return confirm('确定要初始化数据库吗？')">初始化数据库</a>
+            </div>
+        </div>
 
-        <!-- 选项卡：SSH/SQL切换 -->
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#ssh" data-toggle="tab">SSH测试</a></li>
-            <li><a href="#sql" data-toggle="tab">SQL测试</a></li>
-        </ul>
+        <!-- 主体内容 -->
+        <div class="main">
+            <!-- 左侧SQL生成区 -->
+            <div class="sql-generator">
+                <h2 style="margin-bottom: 24px; font-size: 18px; color: #333;">可视化SQL生成</h2>
 
-        <div class="tab-content">
-            <!-- SSH测试面板 -->
-            <div class="tab-pane active" id="ssh">
+                <!-- 基础配置 -->
                 <div class="form-group">
-                    <label>选择环境：</label>
-                    <select id="ssh-env" class="form-control" style="width: 200px;">
-                        <option value="test">测试环境</option>
-                        <option value="pre">预发环境</option>
-                        <option value="prod">生产环境</option>
+                    <label>操作类型</label>
+                    <select id="operationType" class="form-control" onchange="changeOperationType()">
+                        {% for type in page_config.operation_types %}
+                        <option value="{{ type }}">{{ type }}</option>
+                        {% endfor %}
                     </select>
                 </div>
+
                 <div class="form-group">
-                    <label>SSH命令：</label>
-                    <textarea id="ssh-command" class="form-control" placeholder="输入SSH命令，如：tail -n 100 /data/logs/test.log"></textarea>
+                    <label>数据库连接</label>
+                    <select id="dbAliasSelect" class="form-control" onchange="loadDbNames()">
+                        <option value="">请选择</option>
+                    </select>
                 </div>
-                <button id="ssh-exec" class="btn btn-primary">执行命令</button>
-                <div class="result-box" id="ssh-result">等待执行...</div>
+
+                <div class="form-group">
+                    <label>数据库名</label>
+                    <select id="dbNameSelect" class="form-control" onchange="loadTableNames()">
+                        <option value="">请先选择数据库连接</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>表名</label>
+                    <select id="tableNameSelect" class="form-control" onchange="loadTableFields()">
+                        <option value="">请先选择数据库名</option>
+                    </select>
+                </div>
+
+                <!-- SELECT专用 -->
+                <div id="selectFieldsGroup" class="form-group">
+                    <label>查询字段（多选）</label>
+                    <select id="fieldsSelect" class="form-control" multiple size="5">
+                        <option value="*">所有字段 (*)</option>
+                    </select>
+                    <div style="margin-top: 8px; font-size: 12px; color: #666;">
+                        提示：按住Ctrl键可多选
+                    </div>
+                </div>
+
+                <!-- UPDATE专用 -->
+                <div id="updateFieldsGroup" class="form-group" style="display: none;">
+                    <label>更新字段</label>
+                    <div id="updateFieldsContainer">
+                        <div class="update-field-group">
+                            <div class="condition-row">
+                                <div>
+                                    <label>字段名</label>
+                                    <select class="form-control update-field-name">
+                                        <option value="">请选择字段</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label>字段值</label>
+                                    <input type="text" class="form-control update-field-value" placeholder="输入字段值">
+                                </div>
+                                <div style="flex: none; align-self: flex-end;">
+                                    <button class="btn btn-danger btn-sm" onclick="removeUpdateField(this)">删除</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-sm" style="margin-top: 8px;" onclick="addUpdateField()">
+                        添加更新字段
+                    </button>
+                </div>
+
+                <!-- 条件组 -->
+                <div class="form-group">
+                    <label>查询条件</label>
+                    <div id="conditionsContainer">
+                        <div class="condition-group">
+                            <div class="condition-row">
+                                <div>
+                                    <label>字段名</label>
+                                    <select class="form-control condition-field">
+                                        <option value="">请选择字段</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label>运算符</label>
+                                    <select class="form-control condition-operator">
+                                        {% for op in page_config.condition_operators %}
+                                        <option value="{{ op }}">{{ op }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div>
+                                    <label>值</label>
+                                    <input type="text" class="form-control condition-value" placeholder="输入条件值">
+                                </div>
+                            </div>
+                            <div class="condition-row">
+                                <div>
+                                    <label>连接符</label>
+                                    <select class="form-control condition-connector">
+                                        <option value="">无（最后一个条件）</option>
+                                        {% for conn in page_config.condition_connectors %}
+                                        <option value="{{ conn }}">{{ conn }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="condition-actions">
+                                <button class="btn btn-danger btn-sm" onclick="removeCondition(this)">删除</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-sm" style="margin-top: 8px;" onclick="addCondition()">
+                        添加条件
+                    </button>
+                </div>
+
+                <!-- LIMIT -->
+                <div class="form-group">
+                    <label>返回行数（LIMIT）</label>
+                    <input type="number" id="limitNum" class="form-control" placeholder="留空则不限制" min="1">
+                </div>
+
+                <!-- 保存配置 -->
+                <div class="form-group">
+                    <label>配置名称（保存时必填）</label>
+                    <input type="text" id="configName" class="form-control" placeholder="输入配置名称">
+                </div>
+
+                <div class="form-group">
+                    <label>备注</label>
+                    <textarea id="remark" class="form-control" rows="3" placeholder="输入备注信息（可选）"></textarea>
+                </div>
+
+                <!-- 生成的SQL预览 -->
+                <div class="form-group">
+                    <label>生成的SQL预览</label>
+                    <div id="sqlPreview" class="sql-preview">
+                        请点击"生成SQL"按钮生成SQL语句
+                    </div>
+                </div>
+
+                <!-- 操作按钮 -->
+                <div style="display: flex; gap: 12px; margin-top: 24px;">
+                    <button class="btn btn-primary" onclick="generateSql()">生成SQL</button>
+                    <button class="btn btn-success" onclick="executeSql()">执行SQL</button>
+                    <button class="btn btn-outline" onclick="saveSqlConfig()">保存配置</button>
+                    <button class="btn btn-outline" onclick="resetForm()">重置</button>
+                </div>
             </div>
 
-            <!-- SQL测试面板 -->
-            <div class="tab-pane" id="sql">
-                <div class="form-group">
-                    <label>选择环境：</label>
-                    <select id="sql-env" class="form-control" style="width: 200px;">
-                        <option value="test">测试环境</option>
-                        <option value="pre">预发环境</option>
-                        <option value="prod">生产环境</option>
-                    </select>
+            <!-- 右侧结果展示区 -->
+            <div class="result-area">
+                <div class="result-header">
+                    <h2 style="font-size: 18px; color: #333;">执行结果</h2>
+                    <div style="display: flex; gap: 12px; align-items: center;">
+                        <label>展示样式：</label>
+                        <select id="resultStyleSelect" class="form-control result-style-select">
+                            {% for style in page_config.result_styles %}
+                            <option value="{{ style }}">{{ style }}</option>
+                            {% endfor %}
+                        </select>
+                        <button class="btn btn-outline btn-sm" onclick="refreshResult()">刷新</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>SQL语句：</label>
-                    <textarea id="sql-command" class="form-control" placeholder="输入SQL语句，如：SELECT * FROM test_user LIMIT 10"></textarea>
+
+                <!-- 提示信息 -->
+                <div id="resultAlert" style="display: none;" class="alert"></div>
+
+                <!-- 加载中 -->
+                <div id="loading" class="loading" style="display: none;">
+                    正在处理，请稍候...
                 </div>
-                <button id="sql-exec" class="btn btn-primary">执行SQL</button>
-                <div class="result-box" id="sql-result">等待执行...</div>
+
+                <!-- 结果展示容器 -->
+                <div id="resultContainer">
+                    <div style="text-align: center; color: #666; padding: 40px;">
+                        请生成并执行SQL查看结果
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- 前端交互逻辑 -->
     <script>
-        // SSH执行按钮点击事件
-        $("#ssh-exec").click(function() {
-            var env = $("#ssh-env").val();
-            var command = $("#ssh-command").val();
-            $("#ssh-result").text("执行中...");
+        // 全局变量
+        let currentSql = "";
+        let currentResult = null;
+        let currentFields = [];
 
-            // 调用后端SSH接口
-            $.ajax({
-                url: "/api/ssh/exec",
-                type: "POST",
-                contentType: "application/json",
-                data: JSON.stringify({env: env, command: command}),
-                success: function(res) {
-                    if (res.code === 200) {
-                        $("#ssh-result").text("执行结果：\n" + JSON.stringify(res.data, null, 2));
+        // 页面加载初始化
+        window.onload = function() {
+            loadDbList();
+        };
+
+        // 加载数据库连接列表
+        function loadDbList() {
+            fetch('/api/get_db_list')
+                .then(res => res.json())
+                .then(data => {
+                    if (data.code === 200 && data.data) {
+                        const select = document.getElementById('dbAliasSelect');
+                        select.innerHTML = '<option value="">请选择</option>';
+                        data.data.forEach(item => {
+                            const option = document.createElement('option');
+                            option.value = item.alias;
+                            option.textContent = item.alias;
+                            select.appendChild(option);
+                        });
                     } else {
-                        $("#ssh-result").text("执行失败：\n" + res.msg);
+                        showAlert('加载数据库列表失败：' + data.msg, 'error');
                     }
-                },
-                error: function() {
-                    $("#ssh-result").text("接口调用失败，请检查后端服务");
+                })
+                .catch(err => {
+                    showAlert('加载数据库列表异常：' + err.message, 'error');
+                });
+        }
+
+        // 加载数据库名列表
+        function loadDbNames() {
+            const dbAlias = document.getElementById('dbAliasSelect').value;
+            if (!dbAlias) {
+                document.getElementById('dbNameSelect').innerHTML = '<option value="">请先选择数据库连接</option>';
+                return;
+            }
+
+            fetch('/api/get_db_names', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ db_alias: dbAlias })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.code === 200 && data.data) {
+                    const select = document.getElementById('dbNameSelect');
+                    select.innerHTML = '<option value="">请选择</option>';
+                    data.data.forEach(name => {
+                        const option = document.createElement('option');
+                        option.value = name;
+                        option.textContent = name;
+                        select.appendChild(option);
+                    });
+                } else {
+                    showAlert('加载库名失败：' + data.msg, 'error');
+                }
+            })
+            .catch(err => {
+                showAlert('加载库名异常：' + err.message, 'error');
+            });
+        }
+
+        // 加载表名列表
+        function loadTableNames() {
+            const dbAlias = document.getElementById('dbAliasSelect').value;
+            const dbName = document.getElementById('dbNameSelect').value;
+
+            if (!dbAlias || !dbName) {
+                document.getElementById('tableNameSelect').innerHTML = '<option value="">请先选择数据库名</option>';
+                return;
+            }
+
+            fetch('/api/get_table_names', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    db_alias: dbAlias,
+                    db_name: dbName
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.code === 200 && data.data) {
+                    const select = document.getElementById('tableNameSelect');
+                    select.innerHTML = '<option value="">请选择</option>';
+                    data.data.forEach(name => {
+                        const option = document.createElement('option');
+                        option.value = name;
+                        option.textContent = name;
+                        select.appendChild(option);
+                    });
+                } else {
+                    showAlert('加载表名失败：' + data.msg, 'error');
+                }
+            })
+            .catch(err => {
+                showAlert('加载表名异常：' + err.message, 'error');
+            });
+        }
+
+        // 加载表字段
+        function loadTableFields() {
+            const dbAlias = document.getElementById('dbAliasSelect').value;
+            const dbName = document.getElementById('dbNameSelect').value;
+            const tableName = document.getElementById('tableNameSelect').value;
+
+            if (!dbAlias || !dbName || !tableName) {
+                return;
+            }
+
+            fetch('/api/get_table_fields', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    db_alias: dbAlias,
+                    db_name: dbName,
+                    table_name: tableName
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.code === 200 && data.data) {
+                    // 更新查询字段选择框
+                    const fieldsSelect = document.getElementById('fieldsSelect');
+                    fieldsSelect.innerHTML = '<option value="*">所有字段 (*)</option>';
+                    data.data.forEach(field => {
+                        const option = document.createElement('option');
+                        option.value = field;
+                        option.textContent = field;
+                        fieldsSelect.appendChild(option);
+                    });
+
+                    // 更新条件字段选择框
+                    document.querySelectorAll('.condition-field').forEach(select => {
+                        select.innerHTML = '<option value="">请选择字段</option>';
+                        data.data.forEach(field => {
+                            const option = document.createElement('option');
+                            option.value = field;
+                            option.textContent = field;
+                            select.appendChild(option);
+                        });
+                    });
+
+                    // 更新更新字段选择框
+                    document.querySelectorAll('.update-field-name').forEach(select => {
+                        select.innerHTML = '<option value="">请选择字段</option>';
+                        data.data.forEach(field => {
+                            const option = document.createElement('option');
+                            option.value = field;
+                            option.textContent = field;
+                            select.appendChild(option);
+                        });
+                    });
+                } else {
+                    showAlert('加载字段失败：' + data.msg, 'error');
+                }
+            })
+            .catch(err => {
+                showAlert('加载字段异常：' + err.message, 'error');
+            });
+        }
+
+// 切换操作类型
+        function changeOperationType() {
+            const operationType = document.getElementById('operationType').value;
+            const selectFieldsGroup = document.getElementById('selectFieldsGroup');
+            const updateFieldsGroup = document.getElementById('updateFieldsGroup');
+
+            // SELECT显示查询字段，隐藏更新字段
+            if (operationType === 'SELECT') {
+                selectFieldsGroup.style.display = 'block';
+                updateFieldsGroup.style.display = 'none';
+            }
+            // UPDATE显示更新字段，隐藏查询字段
+            else if (operationType === 'UPDATE') {
+                selectFieldsGroup.style.display = 'none';
+                updateFieldsGroup.style.display = 'block';
+            }
+            // DELETE都隐藏
+            else if (operationType === 'DELETE') {
+                selectFieldsGroup.style.display = 'none';
+                updateFieldsGroup.style.display = 'none';
+            }
+            // 重置SQL预览
+            document.getElementById('sqlPreview').innerText = '请点击"生成SQL"按钮生成SQL语句';
+            currentSql = '';
+        }
+
+        // 添加查询条件
+		function addCondition() {
+			const conditionsContainer = document.getElementById('conditionsContainer');
+			// ========== 手动定义带中文的运算符选项（替代原动态复制） ==========
+			const operatorOptions = `
+				<option value="=">等于（=）</option>
+				<option value="!=">不等于（!=）</option>
+				<option value=">">大于（>）</option>
+				<option value=">=">大于等于（>=）</option>
+				<option value="<">小于（<）</option>
+				<option value="<=">小于等于（<=）</option>
+				<option value="LIKE">模糊匹配（LIKE）</option>
+				<option value="NOT LIKE">不模糊匹配（NOT LIKE）</option>
+				<option value="IN">包含（IN）</option>
+				<option value="NOT IN">不包含（NOT IN）</option>
+				<option value="BETWEEN">介于（BETWEEN）</option>
+				<option value="NOT BETWEEN">不介于（NOT BETWEEN）</option>
+				<option value="IS NULL">为空（IS NULL）</option>
+				<option value="IS NOT NULL">不为空（IS NOT NULL）</option>
+			`;
+			const connectorOptions = Array.from(document.querySelectorAll('#conditionsContainer .condition-connector option'))
+				.map(option => `<option value="${option.value}">${option.textContent}</option>`)
+				.join('');
+			const fieldOptions = Array.from(document.querySelectorAll('#conditionsContainer .condition-field option'))
+				.map(option => `<option value="${option.value}">${option.textContent}</option>`)
+				.join('');
+
+			// 生成新的条件组DOM
+			const newCondition = `
+				<div class="condition-group">
+					<div class="condition-row">
+						<div>
+							<label>字段名</label>
+							<select class="form-control condition-field">
+								${fieldOptions}
+							</select>
+						</div>
+						<div>
+							<label>运算符</label>
+							<select class="form-control condition-operator">
+								${operatorOptions}  <!-- 使用带中文的选项 -->
+							</select>
+						</div>
+						<div>
+							<label>值</label>
+							<input type="text" class="form-control condition-value" placeholder="输入条件值">
+						</div>
+					</div>
+					<div class="condition-row">
+						<div>
+							<label>连接符</label>
+							<select class="form-control condition-connector">
+								${connectorOptions}
+							</select>
+						</div>
+					</div>
+					<div class="condition-actions">
+						<button class="btn btn-danger btn-sm" onclick="removeCondition(this)">删除</button>
+					</div>
+				</div>
+			`;
+			conditionsContainer.insertAdjacentHTML('beforeend', newCondition);
+		}
+
+        // 删除查询条件
+        function removeCondition(btn) {
+            const conditionGroup = btn.closest('.condition-group');
+            const allGroups = document.querySelectorAll('.condition-group');
+            // 至少保留一个条件组
+            if (allGroups.length > 1) {
+                conditionGroup.remove();
+            } else {
+                showAlert('至少保留一个查询条件组', 'info');
+            }
+        }
+
+        // 添加更新字段
+        function addUpdateField() {
+            const updateFieldsContainer = document.getElementById('updateFieldsContainer');
+            const fieldOptions = Array.from(document.querySelectorAll('#updateFieldsContainer .update-field-name option'))
+                .map(option => `<option value="${option.value}">${option.textContent}</option>`)
+                .join('');
+
+            // 生成新的更新字段组DOM
+            const newUpdateField = `
+                <div class="update-field-group">
+                    <div class="condition-row">
+                        <div>
+                            <label>字段名</label>
+                            <select class="form-control update-field-name">
+                                ${fieldOptions}
+                            </select>
+                        </div>
+                        <div>
+                            <label>字段值</label>
+                            <input type="text" class="form-control update-field-value" placeholder="输入字段值">
+                        </div>
+                        <div style="flex: none; align-self: flex-end;">
+                            <button class="btn btn-danger btn-sm" onclick="removeUpdateField(this)">删除</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            updateFieldsContainer.insertAdjacentHTML('beforeend', newUpdateField);
+        }
+
+        // 删除更新字段
+        function removeUpdateField(btn) {
+            const updateFieldGroup = btn.closest('.update-field-group');
+            const allGroups = document.querySelectorAll('.update-field-group');
+            // 至少保留一个更新字段组
+            if (allGroups.length > 1) {
+                updateFieldGroup.remove();
+            } else {
+                showAlert('至少保留一个更新字段组', 'info');
+            }
+        }
+
+        // 收集页面参数
+        function collectParams() {
+            const operationType = document.getElementById('operationType').value;
+            const dbAlias = document.getElementById('dbAliasSelect').value;
+            const dbName = document.getElementById('dbNameSelect').value;
+            const tableName = document.getElementById('tableNameSelect').value;
+            const limitNum = document.getElementById('limitNum').value.trim();
+            const configName = document.getElementById('configName').value.trim();
+            const remark = document.getElementById('remark').value.trim();
+
+            // 收集查询字段（多选）
+            const fieldsSelect = document.getElementById('fieldsSelect');
+            const fields = Array.from(fieldsSelect.selectedOptions).map(option => option.value);
+
+            // 收集查询条件
+            const conditions = [];
+            document.querySelectorAll('.condition-group').forEach(group => {
+                const field = group.querySelector('.condition-field').value;
+                const operator = group.querySelector('.condition-operator').value;
+                const value = group.querySelector('.condition-value').value.trim();
+                const connector = group.querySelector('.condition-connector').value;
+                if (field && operator) {
+                    conditions.push({ field, operator, value, connector });
                 }
             });
-        });
 
-        // SQL执行按钮点击事件
-        $("#sql-exec").click(function() {
-            var env = $("#sql-env").val();
-            var sql = $("#sql-command").val();
-            $("#sql-result").text("执行中...");
-
-            // 调用后端SQL接口
-            $.ajax({
-                url: "/api/sql/exec",
-                type: "POST",
-                contentType: "application/json",
-                data: JSON.stringify({env: env, sql: sql}),
-                success: function(res) {
-                    if (res.code === 200) {
-                        $("#sql-result").text("执行结果：\n" + JSON.stringify(res.data, null, 2));
-                    } else {
-                        $("#sql-result").text("执行失败：\n" + res.msg);
-                    }
-                },
-                error: function() {
-                    $("#sql-result").text("接口调用失败，请检查后端服务");
+            // 收集更新字段
+            const updateFields = [];
+            document.querySelectorAll('.update-field-group').forEach(group => {
+                const field = group.querySelector('.update-field-name').value;
+                const value = group.querySelector('.update-field-value').value.trim();
+                if (field) {
+                    updateFields.push({ field, value });
                 }
             });
-        });
+
+            // 基础校验
+            if (!dbAlias) {
+                showAlert('请选择数据库连接', 'error');
+                return null;
+            }
+            if (!tableName) {
+                showAlert('请选择表名', 'error');
+                return null;
+            }
+            // UPDATE必须有更新字段，DELETE/UPDATE必须有条件
+            if (operationType === 'UPDATE' && updateFields.length === 0) {
+                showAlert('UPDATE操作必须配置更新字段', 'error');
+                return null;
+            }
+            if ((operationType === 'UPDATE' || operationType === 'DELETE') && conditions.length === 0) {
+                showAlert('UPDATE/DELETE操作必须配置查询条件（防止全表操作）', 'error');
+                return null;
+            }
+
+            return {
+                operation_type: operationType,
+                db_alias: dbAlias,
+                db_name: dbName,
+                table_name: tableName,
+                fields: fields,
+                conditions: conditions,
+                update_fields: updateFields,
+                limit_num: limitNum,
+                config_name: configName,
+                remark: remark
+            };
+        }
+
+        // 生成SQL
+        function generateSql() {
+            const params = collectParams();
+            if (!params) return;
+
+            fetch('/api/generate_sql', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(params)
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.code === 200 && data.data?.sql_text) {
+                    currentSql = data.data.sql_text;
+                    document.getElementById('sqlPreview').innerText = currentSql;
+                    showAlert('SQL生成成功', 'success');
+                } else {
+                    showAlert('SQL生成失败：' + data.msg, 'error');
+                }
+            })
+            .catch(err => {
+                showAlert('SQL生成异常：' + err.message, 'error');
+            });
+        }
+
+        // 渲染执行结果（多样式）
+        function renderResult(fields, result, style) {
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.innerHTML = '';
+
+            // 表格样式（默认）
+            if (style === '表格') {
+                if (!result || result.length === 0) {
+                    resultContainer.innerHTML = '<div style="text-align: center; color: #666; padding: 40px;">无执行结果</div>';
+                    return;
+                }
+                // 生成表格
+                let tableHtml = `<table class="result-table"><thead><tr>`;
+                // 生成表头
+                fields.forEach(field => {
+                    tableHtml += `<th>${field}</th>`;
+                });
+                tableHtml += `</tr></thead><tbody>`;
+                // 生成表体
+                result.forEach(row => {
+                    tableHtml += `<tr>`;
+                    fields.forEach(field => {
+                        tableHtml += `<td>${row[field] ?? ''}</td>`;
+                    });
+                    tableHtml += `</tr>`;
+                });
+                tableHtml += `</tbody></table>`;
+                resultContainer.innerHTML = tableHtml;
+            }
+            // JSON样式
+            else if (style === 'JSON') {
+                const jsonHtml = `<div class="json-view">${result}</div>`;
+                resultContainer.innerHTML = jsonHtml;
+            }
+            // 卡片式样式
+            else if (style === '卡片式') {
+                if (!result || result.length === 0) {
+                    resultContainer.innerHTML = '<div style="text-align: center; color: #666; padding: 40px;">无执行结果</div>';
+                    return;
+                }
+                // 生成卡片容器
+                let cardHtml = `<div class="card-container">`;
+                result.forEach(row => {
+                    cardHtml += `<div class="card">`;
+                    fields.forEach(field => {
+                        cardHtml += `<div class="card-field"><label>${field}：</label>${row[field] ?? ''}</div>`;
+                    });
+                    cardHtml += `</div>`;
+                });
+                cardHtml += `</div>`;
+                resultContainer.innerHTML = cardHtml;
+            }
+        }
+
+        // 执行SQL
+        function executeSql() {
+            if (!currentSql) {
+                showAlert('请先生成SQL语句', 'error');
+                return;
+            }
+            const params = collectParams();
+            if (!params) return;
+            const resultStyle = document.getElementById('resultStyleSelect').value;
+
+            // 显示加载状态
+            document.getElementById('loading').style.display = 'flex';
+            document.getElementById('resultAlert').style.display = 'none';
+
+            fetch('/api/execute_sql', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    db_alias: params.db_alias,
+                    db_name: params.db_name,
+                    sql_text: currentSql,
+                    result_style: resultStyle
+                })
+            })
+            .then(res => {
+                // CSV下载特殊处理（后端返回文件，非JSON）
+                if (resultStyle === 'CSV下载') {
+                    if (res.ok) {
+                        res.blob().then(blob => {
+                            const a = document.createElement('a');
+                            const url = URL.createObjectURL(blob);
+                            a.href = url;
+                            a.download = `sql_result_${new Date().getTime()}.csv`;
+                            a.click();
+                            URL.revokeObjectURL(url);
+                            showAlert('CSV文件下载成功', 'success');
+                        });
+                    } else {
+                        showAlert('CSV下载失败', 'error');
+                    }
+                    return null;
+                }
+                return res.json();
+            })
+            .then(data => {
+                document.getElementById('loading').style.display = 'none';
+                if (!data) return;
+                if (data.code === 200 && data.data) {
+                    currentResult = data.data.result;
+                    currentFields = data.data.fields;
+                    showAlert('SQL执行成功', 'success');
+                    // 渲染结果
+                    renderResult(currentFields, currentResult, data.data.style);
+                } else {
+                    showAlert('SQL执行失败：' + data.msg, 'error');
+                }
+            })
+            .catch(err => {
+                document.getElementById('loading').style.display = 'none';
+                showAlert('SQL执行异常：' + err.message, 'error');
+            });
+        }
+
+        // 保存SQL配置
+        function saveSqlConfig() {
+            if (!currentSql) {
+                showAlert('请先生成SQL语句', 'error');
+                return;
+            }
+            const params = collectParams();
+            if (!params) return;
+            if (!params.config_name) {
+                showAlert('请输入配置名称', 'error');
+                return;
+            }
+
+            // 先获取数据库连接的详细配置
+            fetch('/api/get_db_list')
+            .then(res => res.json())
+            .then(dbData => {
+                if (dbData.code !== 200) {
+                    showAlert('获取数据库配置失败', 'error');
+                    return;
+                }
+                const dbConfig = dbData.data.find(item => item.alias === params.db_alias)?.config;
+                if (!dbConfig) {
+                    showAlert('未找到数据库连接配置', 'error');
+                    return;
+                }
+
+                // 构造保存参数（含完整数据库信息）
+                const saveParams = {
+                    config_name: params.config_name,
+                    db_alias: params.db_alias,
+                    db_host: dbConfig.host,
+                    db_port: dbConfig.port,
+                    db_user: dbConfig.user,
+                    db_password: dbConfig.password,
+                    db_name: params.db_name,
+                    table_name: params.table_name,
+                    operation_type: params.operation_type,
+                    fields: params.fields,
+                    conditions: params.conditions,
+                    update_fields: params.update_fields,
+                    limit_num: params.limit_num,
+                    sql_text: currentSql,
+                    remark: params.remark
+                };
+
+                // 调用保存接口
+                fetch('/api/save_sql_config', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(saveParams)
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.code === 200) {
+                        showAlert('SQL配置保存成功，可前往【已保存SQL配置】页面查看', 'success');
+                        document.getElementById('configName').value = '';
+                        document.getElementById('remark').value = '';
+                    } else {
+                        showAlert('配置保存失败：' + data.msg, 'error');
+                    }
+                });
+            })
+            .catch(err => {
+                showAlert('保存异常：' + err.message, 'error');
+            });
+        }
+
+        // 刷新结果（切换样式时调用）
+        function refreshResult() {
+            if (!currentResult || !currentFields) {
+                showAlert('暂无执行结果可刷新', 'info');
+                return;
+            }
+            const resultStyle = document.getElementById('resultStyleSelect').value;
+            renderResult(currentFields, currentResult, resultStyle);
+            showAlert('结果样式切换成功', 'success');
+        }
+
+        // 重置表单
+        function resetForm() {
+            document.getElementById('operationType').value = 'SELECT';
+            document.getElementById('dbAliasSelect').value = '';
+            document.getElementById('dbNameSelect').innerHTML = '<option value="">请先选择数据库连接</option>';
+            document.getElementById('tableNameSelect').innerHTML = '<option value="">请先选择数据库名</option>';
+            document.getElementById('fieldsSelect').innerHTML = '<option value="*">所有字段 (*)</option>';
+            document.getElementById('limitNum').value = '';
+            document.getElementById('configName').value = '';
+            document.getElementById('remark').value = '';
+            document.getElementById('sqlPreview').innerText = '请点击"生成SQL"按钮生成SQL语句';
+            document.getElementById('resultContainer').innerHTML = '<div style="text-align: center; color: #666; padding: 40px;">请生成并执行SQL查看结果</div>';
+            document.getElementById('resultAlert').style.display = 'none';
+
+            // 重置条件和更新字段（保留一个空组）
+            const conditionsContainer = document.getElementById('conditionsContainer');
+            while (conditionsContainer.children.length > 1) {
+                conditionsContainer.removeChild(conditionsContainer.lastChild);
+            }
+            const updateFieldsContainer = document.getElementById('updateFieldsContainer');
+            while (updateFieldsContainer.children.length > 1) {
+                updateFieldsContainer.removeChild(updateFieldsContainer.lastChild);
+            }
+
+            // 重置全局变量
+            currentSql = '';
+            currentResult = null;
+            currentFields = [];
+            changeOperationType();
+        }
+
+        // 显示提示弹窗
+        function showAlert(msg, type = 'info') {
+            const resultAlert = document.getElementById('resultAlert');
+            resultAlert.style.display = 'block';
+            resultAlert.className = 'alert';
+            // 区分提示类型
+            if (type === 'success') {
+                resultAlert.classList.add('alert-success');
+            } else if (type === 'error') {
+                resultAlert.classList.add('alert-error');
+            } else {
+                resultAlert.classList.add('alert-info');
+            }
+            resultAlert.innerText = msg;
+            // 3秒后自动隐藏成功提示
+            if (type === 'success') {
+                setTimeout(() => {
+                    resultAlert.style.display = 'none';
+                }, 3000);
+            }
+        }
     </script>
-
-    <!-- 引入Bootstrap JS -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>

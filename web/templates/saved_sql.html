@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_config.title }} - 已保存SQL配置</title>
+    <style>
+        /* 全局全屏样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+        }
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #f0f2f5;
+        }
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+        }
+        /* 头部 */
+        .header {
+            background-color: {{ page_config.theme_color }};
+            color: white;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .header .nav {
+            display: flex;
+            gap: 24px;
+        }
+        .header .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+        .header .nav a:hover {
+            opacity: 1;
+        }
+        /* 主体内容 - 全屏滚动 */
+        .main {
+            flex: 1;
+            padding: 24px;
+            overflow-y: auto;
+        }
+        /* 搜索栏 */
+        .search-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            align-items: center;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 10px 16px;
+            border: 1px solid #d9d9d9;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .search-bar input:focus {
+            outline: none;
+            border-color: {{ page_config.theme_color }};
+            box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2);
+        }
+        /* 按钮样式 */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background-color: {{ page_config.theme_color }};
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #0d6efd;
+        }
+        .btn-danger {
+            background-color: #f5222d;
+            color: white;
+        }
+        .btn-danger:hover {
+            background-color: #d91822;
+        }
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid {{ page_config.theme_color }};
+            color: {{ page_config.theme_color }};
+        }
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+        /* 表格样式 */
+        .sql-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .sql-table th, .sql-table td {
+            padding: 16px 24px;
+            text-align: left;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .sql-table th {
+            background-color: #f8f9fa;
+            font-weight: 500;
+            color: #333;
+        }
+        .sql-table tr:hover {
+            background-color: #fafafa;
+        }
+        .sql-table .operate {
+            display: flex;
+            gap: 8px;
+        }
+        /* 空数据提示 */
+        .empty-tip {
+            text-align: center;
+            padding: 80px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .empty-tip i {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: #ddd;
+            display: block;
+        }
+        /* 弹窗样式 */
+        .modal-mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .modal-container {
+            background: white;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 1200px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .modal-header {
+            padding: 16px 24px;
+            border-bottom: 1px solid #e8e8e8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        .modal-close {
+            font-size: 24px;
+            color: #666;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .modal-close:hover {
+            color: #f5222d;
+        }
+        .modal-body {
+            padding: 24px;
+        }
+        .modal-footer {
+            padding: 16px 24px;
+            border-top: 1px solid #e8e8e8;
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+        /* 详情样式 */
+        .detail-item {
+            margin-bottom: 16px;
+        }
+        .detail-item label {
+            display: block;
+            font-weight: 500;
+            color: #666;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .detail-item .value {
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            font-size: 14px;
+            word-break: break-all;
+        }
+        .sql-content {
+            background: #f5f5f5;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 16px 0;
+            font-family: "Consolas", "Monaco", monospace;
+            font-size: 14px;
+            color: #333;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: 1px solid #e8e8e8;
+        }
+        /* 结果展示区 */
+        .result-section {
+            margin-top: 24px;
+            border-top: 1px solid #e8e8e8;
+            padding-top: 24px;
+        }
+        .result-style {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .result-style select {
+            padding: 8px 12px;
+            border: 1px solid #d9d9d9;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        /* 结果子样式 */
+        .result-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+        .result-table th, .result-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .result-table th {
+            background-color: #f8f9fa;
+            font-weight: 500;
+        }
+        .json-view {
+            background: #f5f5f5;
+            border-radius: 6px;
+            padding: 16px;
+            font-family: "Consolas", "Monaco", monospace;
+            font-size: 14px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: 1px solid #e8e8e8;
+            margin-top: 16px;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 1px solid #e8e8e8;
+        }
+        .card .card-field {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .card .card-field label {
+            font-weight: 500;
+            color: #666;
+            margin-right: 8px;
+        }
+        /* 加载/提示 */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 14px;
+        }
+        .alert {
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+        .alert-success {
+            background-color: #f0f9ff;
+            color: #52c41a;
+            border: 1px solid #b7eb8f;
+        }
+        .alert-error {
+            background-color: #fff2f0;
+            color: #f5222d;
+            border: 1px solid #ffccc7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>已保存SQL配置管理</h1>
+            <div class="nav">
+                <a href="/">返回可视化SQL生成</a>
+                <a href="/api/init_web_db" onclick="return confirm('确定要初始化数据库吗？')">初始化数据库</a>
+            </div>
+        </div>
+
+        <!-- 主体内容 -->
+        <div class="main">
+            <!-- 搜索栏 -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="输入配置名称/库名/表名搜索...">
+                <button class="btn btn-outline" onclick="searchSql()">搜索</button>
+                <button class="btn btn-primary" onclick="refreshList()">刷新列表</button>
+            </div>
+
+            <!-- 提示框 -->
+            <div id="alertBox" class="alert" style="display: none;"></div>
+
+            <!-- 加载状态 -->
+            <div id="loading" class="loading">加载中...</div>
+
+            <!-- SQL配置表格 -->
+            <table class="sql-table" id="sqlTable" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>配置名称</th>
+                        <th>数据库连接</th>
+                        <th>库名</th>
+                        <th>表名</th>
+                        <th>操作类型</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="sqlTableBody"></tbody>
+            </table>
+
+            <!-- 空数据提示 -->
+            <div id="emptyTip" class="empty-tip" style="display: none;">
+                <i>📄</i>
+                <div>暂无保存的SQL配置，前往可视化SQL生成页面创建并保存</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 详情/执行弹窗 -->
+    <div class="modal-mask" id="detailModal" style="display: none;">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>SQL配置详情 & 执行</h2>
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <!-- 配置详情 -->
+                <div class="detail-item">
+                    <label>配置名称</label>
+                    <div class="value" id="detailConfigName"></div>
+                </div>
+                <div class="detail-item" style="display: flex; gap: 16px;">
+                    <div style="flex: 1;">
+                        <label>数据库连接</label>
+                        <div class="value" id="detailDbAlias"></div>
+                    </div>
+                    <div style="flex: 1;">
+                        <label>操作类型</label>
+                        <div class="value" id="detailOperationType"></div>
+                    </div>
+                </div>
+                <div class="detail-item" style="display: flex; gap: 16px;">
+                    <div style="flex: 1;">
+                        <label>库名</label>
+                        <div class="value" id="detailDbName"></div>
+                    </div>
+                    <div style="flex: 1;">
+                        <label>表名</label>
+                        <div class="value" id="detailTableName"></div>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <label>创建时间</label>
+                    <div class="value" id="detailCreateTime"></div>
+                </div>
+                <div class="detail-item">
+                    <label>备注</label>
+                    <div class="value" id="detailRemark" style="min-height: 40px;"></div>
+                </div>
+                <div class="detail-item">
+                    <label>SQL语句</label>
+                    <div class="sql-content" id="detailSqlText"></div>
+                </div>
+
+                <!-- 执行区域 -->
+                <div class="result-section">
+                    <div class="result-style">
+                        <label>执行结果展示样式：</label>
+                        <select id="resultStyleSelect">
+                            <option value="表格">表格</option>
+                            <option value="JSON">JSON</option>
+                            <option value="卡片式">卡片式</option>
+                            <option value="CSV下载">CSV下载</option>
+                        </select>
+                        <button class="btn btn-primary btn-sm" onclick="executeSavedSql()">执行此SQL</button>
+                    </div>
+
+                    <!-- 执行提示 -->
+                    <div id="executeAlert" class="alert" style="display: none;"></div>
+                    <!-- 执行加载 -->
+                    <div id="executeLoading" class="loading" style="display: none;">执行中...</div>
+                    <!-- 结果容器 -->
+                    <div id="resultContainer" style="min-height: 100px;"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 全局变量
+        let currentSqlId = 0;
+        let sqlList = [];
+
+        // 页面加载初始化
+        window.onload = function() {
+            refreshList();
+            // 回车搜索
+            document.getElementById('searchInput').addEventListener('keydown', e => {
+                if (e.key === 'Enter') searchSql();
+            });
+        };
+
+        // 加载/刷新SQL列表
+        function refreshList() {
+            showLoading(true);
+            fetch('/api/get_saved_sql')
+            .then(res => res.json())
+            .then(data => {
+                showLoading(false);
+                if (data.code === 200 && data.data && data.data.length > 0) {
+                    sqlList = data.data;
+                    renderSqlTable(data.data);
+                } else {
+                    showEmptyTip(true);
+                    showAlert('暂无保存的SQL配置', 'info');
+                }
+            })
+            .catch(err => {
+                showLoading(false);
+                showEmptyTip(true);
+                showAlert('加载列表失败：' + err.message, 'error');
+            });
+        }
+
+        // 渲染SQL表格
+        function renderSqlTable(list) {
+            const tableBody = document.getElementById('sqlTableBody');
+            tableBody.innerHTML = '';
+            showEmptyTip(false);
+            document.getElementById('sqlTable').style.display = 'table';
+
+            list.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${item.id}</td>
+                    <td>${item.config_name}</td>
+                    <td>${item.db_alias}</td>
+                    <td>${item.db_name || '未指定'}</td>
+                    <td>${item.table_name || '未指定'}</td>
+                    <td>${item.operation_type}</td>
+                    <td>${item.create_time}</td>
+                    <td class="operate">
+                        <button class="btn btn-primary btn-sm" onclick="showDetail(${item.id})">查看/执行</button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteSql(${item.id})">删除</button>
+                    </td>
+                `;
+                tableBody.appendChild(tr);
+            });
+        }
+
+        // 搜索SQL
+        function searchSql() {
+            const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+            if (!keyword) {
+                renderSqlTable(sqlList);
+                showAlert('请输入搜索关键词', 'info');
+                return;
+            }
+            const filterList = sqlList.filter(item =>
+                item.config_name.toLowerCase().includes(keyword) ||
+                (item.db_name && item.db_name.toLowerCase().includes(keyword)) ||
+                (item.table_name && item.table_name.toLowerCase().includes(keyword))
+            );
+            if (filterList.length > 0) {
+                renderSqlTable(filterList);
+            } else {
+                showEmptyTip(true);
+                showAlert('未找到匹配的SQL配置', 'info');
+            }
+        }
+
+        // 查看详情
+        function showDetail(sqlId) {
+            currentSqlId = sqlId;
+            fetch(`/api/get_sql_detail/${sqlId}`)
+            .then(res => res.json())
+            .then(data => {
+                if (data.code === 200 && data.data) {
+                    const detail = data.data;
+                    document.getElementById('detailConfigName').innerText = detail.config_name || '';
+                    document.getElementById('detailDbAlias').innerText = detail.db_alias || '';
+                    document.getElementById('detailOperationType').innerText = detail.operation_type || '';
+                    document.getElementById('detailDbName').innerText = detail.db_name || '未指定';
+                    document.getElementById('detailTableName').innerText = detail.table_name || '未指定';
+                    document.getElementById('detailCreateTime').innerText = detail.create_time || '';
+                    document.getElementById('detailRemark').innerText = detail.remark || '无';
+                    document.getElementById('detailSqlText').innerText = detail.sql_text || '';
+                    // 重置执行区域
+                    document.getElementById('executeAlert').style.display = 'none';
+                    document.getElementById('resultContainer').innerHTML = '';
+                    // 显示弹窗
+                    document.getElementById('detailModal').style.display = 'flex';
+                } else {
+                    showAlert('获取详情失败：' + data.msg, 'error');
+                }
+            })
+            .catch(err => {
+                showAlert('获取详情异常：' + err.message, 'error');
+            });
+        }
+
+        // 执行已保存的SQL
+        function executeSavedSql() {
+            const resultStyle = document.getElementById('resultStyleSelect').value;
+            document.getElementById('executeLoading').style.display = 'block';
+            document.getElementById('executeAlert').style.display = 'none';
+            document.getElementById('resultContainer').innerHTML = '';
+
+            fetch(`/api/execute_saved_sql/${currentSqlId}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ result_style: resultStyle })
+            })
+            .then(res => {
+                // CSV下载特殊处理
+                if (resultStyle === 'CSV下载') {
+                    if (res.ok) {
+                        res.blob().then(blob => {
+                            const a = document.createElement('a');
+                            const url = URL.createObjectURL(blob);
+                            a.href = url;
+                            a.download = `saved_sql_result_${currentSqlId}.csv`;
+                            a.click();
+                            URL.revokeObjectURL(url);
+                            showExecuteAlert('CSV文件下载成功', 'success');
+                        });
+                    } else {
+                        showExecuteAlert('CSV下载失败', 'error');
+                    }
+                    return null;
+                }
+                return res.json();
+            })
+            .then(data => {
+                document.getElementById('executeLoading').style.display = 'none';
+                if (!data) return;
+                if (data.code === 200 && data.data) {
+                    showExecuteAlert('SQL执行成功', 'success');
+                    renderResult(data.data.fields, data.data.result, data.data.style);
+                } else {
+                    showExecuteAlert('SQL执行失败：' + data.msg, 'error');
+                }
+            })
+            .catch(err => {
+                document.getElementById('executeLoading').style.display = 'none';
+                showExecuteAlert('SQL执行异常：' + err.message, 'error');
+            });
+        }
+
+        // 渲染执行结果（多样式）
+        function renderResult(fields, result, style) {
+            const container = document.getElementById('resultContainer');
+            container.innerHTML = '';
+
+            if (style === '表格') {
+                if (!result || result.length === 0) {
+                    container.innerHTML = '<div style="text-align: center; color: #666; padding: 20px;">无执行结果</div>';
+                    return;
+                }
+                let tableHtml = `<table class="result-table"><thead><tr>`;
+                fields.forEach(f => tableHtml += `<th>${f}</th>`);
+                tableHtml += `</tr></thead><tbody>`;
+                result.forEach(row => {
+                    tableHtml += `<tr>`;
+                    fields.forEach(f => tableHtml += `<td>${row[f] ?? ''}</td>`);
+                    tableHtml += `</tr>`;
+                });
+                tableHtml += `</tbody></table>`;
+                container.innerHTML = tableHtml;
+            } else if (style === 'JSON') {
+                container.innerHTML = `<div class="json-view">${result}</div>`;
+            } else if (style === '卡片式') {
+                if (!result || result.length === 0) {
+                    container.innerHTML = '<div style="text-align: center; color: #666; padding: 20px;">无执行结果</div>';
+                    return;
+                }
+                let cardHtml = `<div class="card-container">`;
+                result.forEach(row => {
+                    cardHtml += `<div class="card">`;
+                    fields.forEach(f => cardHtml += `<div class="card-field"><label>${f}：</label>${row[f] ?? ''}</div>`);
+                    cardHtml += `</div>`;
+                });
+                cardHtml += `</div>`;
+                container.innerHTML = cardHtml;
+            }
+        }
+
+        // 删除SQL配置
+        function deleteSql(sqlId) {
+            if (!confirm('确定要删除该SQL配置吗？删除后不可恢复！')) return;
+            fetch(`/api/delete_sql/${sqlId}`, { method: 'DELETE' })
+            .then(res => res.json())
+            .then(data => {
+                if (data.code === 200) {
+                    showAlert('删除成功', 'success');
+                    refreshList();
+                } else {
+                    showAlert('删除失败：' + data.msg, 'error');
+                }
+            })
+            .catch(err => {
+                showAlert('删除异常：' + err.message, 'error');
+            });
+        }
+
+        // 关闭弹窗
+        function closeModal() {
+            document.getElementById('detailModal').style.display = 'none';
+            currentSqlId = 0;
+        }
+
+        // 显示加载状态
+        function showLoading(show) {
+            document.getElementById('loading').style.display = show ? 'block' : 'none';
+        }
+
+        // 显示空数据提示
+        function showEmptyTip(show) {
+            document.getElementById('emptyTip').style.display = show ? 'block' : 'none';
+            document.getElementById('sqlTable').style.display = show ? 'none' : 'table';
+        }
+
+        // 显示全局提示
+        function showAlert(msg, type = 'info') {
+            const alertBox = document.getElementById('alertBox');
+            alertBox.style.display = 'block';
+            alertBox.className = 'alert';
+            if (type === 'success') alertBox.classList.add('alert-success');
+            else if (type === 'error') alertBox.classList.add('alert-error');
+            alertBox.innerText = msg;
+            setTimeout(() => alertBox.style.display = 'none', 3000);
+        }
+
+        // 显示执行区域提示
+        function showExecuteAlert(msg, type = 'info') {
+            const alertBox = document.getElementById('executeAlert');
+            alertBox.style.display = 'block';
+            alertBox.className = 'alert';
+            if (type === 'success') alertBox.classList.add('alert-success');
+            else if (type === 'error') alertBox.classList.add('alert-error');
+            alertBox.innerText = msg;
+            setTimeout(() => alertBox.style.display = 'none', 3000);
+        }
+
+        // 点击弹窗外部关闭
+        window.onclick = function(e) {
+            const modal = document.getElementById('detailModal');
+            if (e.target === modal) closeModal();
+        };
+    </script>
+</body>
+</html>
